@@ -18,8 +18,6 @@ pre: " <b> 1.8. </b> "
 
 ### Các công việc cần triển khai trong tuần này:
 
-# Tuần 8: Ôn tập và Thi giữa kỳ
-
 | Ngày  | Nhiệm vụ                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
 | :---- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------- | :-------------- | :----------------- |
 | **2** | **Ôn tập giữa kỳ:**<br>1. **Phần 3: Kiến trúc Hiệu năng cao (High Performance Architecture):**<br>- AWS Fargate - Container phi máy chủ<br>- AWS Lambda - Kiến trúc hướng sự kiện (Event-Driven)<br>- Auto Scaling với CloudWatch<br>2. **Phần 4: Kiến trúc Tối ưu chi phí (Cost-optimized Architecture)**<br>- AWS Cost Explorer - Phân tích & Tối ưu chi phí<br>- Phân cấp lưu trữ S3 (S3 Storage Tiering) - Tối ưu tự động theo vòng đời<br>- Kiến trúc VPC hoàn chỉnh với NAT Gateway | 27/10/2025   | 27/10/2025      | Link ôn tập        |

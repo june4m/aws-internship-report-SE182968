@@ -31,8 +31,6 @@ pre: " <b> 1.2. </b> "
 
 ### Thu Hoạch Tuần 2
 
-Tôi tập trung vào bảo mật tài khoản, quản lý chi phí và triển khai các kiến trúc mạng phức tạp.
-
 - **Bảo mật & Quản trị Tài khoản (Account Security & Governance):** Đã thực hiện thành công các bước bảo mật tối quan trọng như MFA và áp dụng các phương pháp tốt nhất cho IAM (sử dụng Admin User thay vì Root). Việc thiết lập AWS Budgets là một thói quen tốt cần duy trì.
 - **Triển khai VPC & Khắc phục sự cố (VPC Deployment & Troubleshooting):** Tôi đã tự triển khai được kiến trúc VPC đầy đủ (IGW, NAT Gateway) và quan trọng nhất là trải nghiệm việc Troubleshooting. Lỗi kết nối (dù gây mất thời gian) là bài học đắt giá nhất, giúp tôi hiểu rõ vai trò của từng thành phần trong Route Table và Security Group.
 - **Mạng nâng cao (Advanced Networking):** Đã nắm được cách kết nối mạng mở rộng (VPC Peering và Transit Gateway) và bắt đầu tiếp cận Hybrid Cloud qua Route 53 Resolver.

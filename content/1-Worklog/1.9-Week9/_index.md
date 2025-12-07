@@ -17,8 +17,6 @@ pre: " <b> 1.9. </b> "
 
 ### Tasks to be implemented this week:
 
-# Week 9: Model Building & Data Refinement
-
 | Day   | Task                                                                                                                                          | Start Date | Completion Date | Reference            |
 | :---- | :-------------------------------------------------------------------------------------------------------------------------------------------- | :--------- | :-------------- | :------------------- |
 | **2** | **Model Building:**<br>- Configure model recipe<br>- Create dataset import job<br>- Run training process                                      | 10/11/2025 | 11/11/2025      | AWS Personalize Docs |

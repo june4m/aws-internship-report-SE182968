@@ -12,12 +12,7 @@ pre: " <b> 1.5. </b> "
 
 ### Mục tiêu tuần 5:
 
-- Kết nối, làm quen với các thành viên trong First Cloud Journey.
-- Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
-
 ### Các công việc cần triển khai trong tuần này:
-
-Tuần 5 – Quản trị Bảo mật Đám mây, Khám phá Serverless & Khởi động Dự án
 
 | Ngày  | Nhiệm vụ                                                                                                                                                                                                                            | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo          |
 | :---- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------- | :-------------- | :-------------------------- |

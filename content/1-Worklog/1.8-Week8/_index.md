@@ -18,8 +18,6 @@ pre: " <b> 1.8. </b> "
 
 ### Tasks to be implemented this week:
 
-# Week 8: Review and Midterm Exam
-
 | Day   | Task                                                                                                                                                                                                                                                                                                                                                                                                           | Start Date | Completion Date | Reference   |
 | :---- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------- | :-------------- | :---------- |
 | **2** | **Midterm Review:**<br>1. **Part 3: High Performance Architecture:**<br>- AWS Fargate - Serverless Container<br>- AWS Lambda - Event-Driven Architecture<br>- Auto Scaling with CloudWatch<br>2. **Part 4: Cost-optimized Architecture**<br>- AWS Cost Explorer - Cost Analysis & Optimization<br>- S3 Storage Tiering - Lifecycle Automated Cost Optimization<br>- Complete VPC Architecture with NAT Gateway | 27/10/2025 | 27/10/2025      | Review Link |

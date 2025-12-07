@@ -12,12 +12,7 @@ pre: " <b> 1.4. </b> "
 
 ### Week 4 Goals:
 
-- Connect and get to know members of the First Cloud Journey.
-- Understand basic AWS services, how to use the Console & CLI.
-
 ### Tasks to be implemented this week:
-
-# Week 4 – Mastering Object Storage: Amazon S3, Data Migration & Disaster Recovery Strategies
 
 | Day   | Task                                                                                                                                                                                                                                                                                                                                     | Start Date | Completion Date | Reference |
 | :---- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------- | :-------------- | :-------- |

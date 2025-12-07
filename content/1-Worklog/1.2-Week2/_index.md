@@ -12,7 +12,6 @@ pre: " <b> 1.2. </b> "
 
 ### Week 2 Goals:
 
-- Connect and get to know members of the First Cloud Journey.
 - Understand basic AWS services, how to use the Console & CLI.
 
 ### Tasks to be implemented this week:
@@ -30,8 +29,6 @@ pre: " <b> 1.2. </b> "
 ---
 
 ### Week 2 achievement
-
-I focused on account security, cost management, and deploying complex network architectures.
 
 - **Account Security & Governance:** Successfully implemented critical security steps like MFA and applied IAM best practices (using Admin User instead of Root). Setting up AWS Budgets is a good habit to maintain.
 - **VPC Deployment & Troubleshooting:** I manually deployed a full VPC architecture (IGW, NAT Gateway) and, most importantly, experienced Troubleshooting. Connection failures (though time-consuming) were the most valuable lessons, helping me clearly understand the role of each component in Route Tables and Security Groups.

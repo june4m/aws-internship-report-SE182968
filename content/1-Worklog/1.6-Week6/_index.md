@@ -12,12 +12,7 @@ pre: " <b> 1.6. </b> "
 
 ### Week 6 Goals:
 
-- Connect and get to know members of the First Cloud Journey.
-- Understand basic AWS services, how to use the Console & CLI.
-
 ### Tasks to be implemented this week:
-
-# Week 6 – Solution Architecture Design, Project Proposal & Data Insights
 
 | Day   | Task                                                  | Start Date | Completion Date | Reference            |
 | :---- | :---------------------------------------------------- | :--------- | :-------------- | :------------------- |

@@ -12,12 +12,7 @@ pre: " <b> 1.6. </b> "
 
 ### Mục tiêu tuần 6:
 
-- Kết nối, làm quen với các thành viên trong First Cloud Journey.
-- Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
-
 ### Các công việc cần triển khai trong tuần này:
-
-# Tuần 6 – Thiết kế Kiến trúc Giải pháp, Đề xuất Dự án & Thông tin Chuyên sâu về Dữ liệu
 
 | Ngày  | Nhiệm vụ                                                                                                          | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
 | :---- | :---------------------------------------------------------------------------------------------------------------- | :----------- | :-------------- | :----------------- |

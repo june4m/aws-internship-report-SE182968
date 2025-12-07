@@ -17,8 +17,6 @@ pre: " <b> 1.9. </b> "
 
 ### Các công việc cần triển khai trong tuần này:
 
-# Tuần 9: Xây dựng Mô hình & Tinh chỉnh Dữ liệu
-
 | Ngày  | Nhiệm vụ                                                                                                                                                                         | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo       |
 | :---- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------- | :-------------- | :----------------------- |
 | **2** | **Xây dựng mô hình (Model Building):**<br>- Thiết lập cấu hình mô hình (Recipe)<br>- Nhập dữ liệu (Import job)<br>- Chạy huấn luyện (Training)                                   | 10/11/2025   | 11/11/2025      | Tài liệu AWS Personalize |

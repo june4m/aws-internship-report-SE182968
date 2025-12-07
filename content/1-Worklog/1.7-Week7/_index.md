@@ -18,8 +18,6 @@ pre: " <b> 1.7. </b> "
 
 ### Tasks to be implemented this week:
 
-# Week 7: Core Knowledge Review & Midterm Preparation
-
 | Day   | Task                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | Start Date | Completion Date | Reference   |
 | :---- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------- | :-------------- | :---------- |
 | **2** | **Midterm Review:**<br><br>**Part 1: Secure Architecture**<br>- IAM (Identity & Access Management)<br>- KMS (Key Management Service)<br>- Security Group & NACLs<br>- Secrets Manager<br>- GuardDuty (Threat Detection)<br>- Shield & WAF (DDoS & Web App Protection)<br><br>**Part 2: Resilient Architecture**<br>- Core metrics to memorize (RTO/RPO)<br>- Multi-AZ RDS<br>- Disaster Recovery Strategies<br>- Auto Scaling and Load Balancing<br>- Route 53 and DNS<br>- AWS Backup | 20/10/2025 | 20/10/2025      | Review Link |

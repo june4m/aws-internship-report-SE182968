@@ -12,12 +12,7 @@ pre: " <b> 1.3. </b> "
 
 ### Week 3 Goals:
 
-- Connect and get to know members of the First Cloud Journey.
-- Understand basic AWS services, how to use the Console & CLI.
-
 ### Tasks to be implemented this week:
-
-# Week 3 – Mastering AWS Compute: EC2 Infrastructure, Storage Options & Scalability
 
 | Day   | Task                                                                                                                                                                                                                    | Start Date | Completion Date | Reference       |
 | :---- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------- | :-------------- | :-------------- |
