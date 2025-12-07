@@ -1,6 +1,6 @@
 ---
 title: "Worklog Tuần 9"
-date: "2025-09-08"
+date: "2025-11-10"
 weight: 1
 chapter: false
 pre: " <b> 1.9. </b> "
@@ -10,55 +10,35 @@ pre: " <b> 1.9. </b> "
 ⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
 {{% /notice %}}
 
-### Mục tiêu tuần 7:
+### Mục tiêu tuần 9:
 
-- Kết nối, làm quen với các thành viên trong First Cloud Journey.
-- Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+- Xây dựng và huấn luyện mô hình gợi ý (Recommendation Model).
+- Tinh chỉnh dữ liệu và xử lý các vấn đề phát sinh trong quá trình huấn luyện.
 
 ### Các công việc cần triển khai trong tuần này:
 
-# Tuần 7 – Kỹ thuật Dữ liệu Dự án & Triển khai Gợi ý Thông minh với AWS Personalize
+# Tuần 9: Xây dựng Mô hình & Tinh chỉnh Dữ liệu
 
-| Ngày  | Nhiệm vụ                                                                                                                                                                                                                                                                            | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo     |
-| :---- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------- | :-------------- | :--------------------- |
-| **2** | - Thiết kế, xây dựng dữ liệu cho dự án<br>- user (người dùng)<br>- club (câu lạc bộ)<br>- court (sân)<br>- booking (đặt sân)<br>- operation (vận hành)                                                                                                                              | 03/11/2025   | 03/11/2025      |                        |
-| **3** | - Tìm hiểu về các mô hình cho hệ thống gợi ý:<br>- Lọc cộng tác (Collaborative Filtering)<br>- Lọc dựa trên nội dung (Content based)<br>- Phân rã ma trận (Matrix Factorization CF)                                                                                                 | 04/11/2025   | 04/11/2025      | tài liệu               |
-| **4** | - Tìm hiểu về dữ liệu cần thiết để huấn luyện (train) Personalize, cách nhập (import) dữ liệu lên S3 buckets và cách Personalize lấy dữ liệu từ bucket, định dạng schema<br>- Hiểu về các chỉ số (metrics) đánh giá, loại độ chính xác và Siêu tham số (Hyperparameter) của mô hình | 05/11/2025   | 05/11/2025      | Video 1<br><br>Video 2 |
-| **5** | - Xử lý dữ liệu cho mô hình                                                                                                                                                                                                                                                         | 06/11/2025   | 07/11/2025      |                        |
-| **6** |                                                                                                                                                                                                                                                                                     |              |                 |                        |
+| Ngày  | Nhiệm vụ                                                                                                                                                                         | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo       |
+| :---- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------- | :-------------- | :----------------------- |
+| **2** | **Xây dựng mô hình (Model Building):**<br>- Thiết lập cấu hình mô hình (Recipe)<br>- Nhập dữ liệu (Import job)<br>- Chạy huấn luyện (Training)                                   | 10/11/2025   | 11/11/2025      | Tài liệu AWS Personalize |
+| **3** | Kiểm tra sơ bộ kết quả mô hình và phân tích lỗi                                                                                                                                  | 12/11/2025   | 12/11/2025      |                          |
+| **4** | **Cập nhật & Xử lý lại dữ liệu (Data Refinement):**<br>- Thêm các trường dữ liệu mới vào Schema<br>- Làm sạch và đồng bộ lại dataset<br>- Huấn luyện lại mô hình với dữ liệu mới | 12/11/2025   | 13/11/2025      |                          |
+| **5** | Đánh giá lại các chỉ số sau khi cập nhật dữ liệu                                                                                                                                 | 14/11/2025   | 14/11/2025      |                          |
+| **6** |                                                                                                                                                                                  |              |                 |                          |
 
 ---
 
-### Kết quả đạt được trong tuần 7
+### Thu Hoạch Tuần 9: Thách Thức trong Huấn Luyện Mô Hình và Chất Lượng Dữ Liệu
 
-**1. Thiết kế Sơ đồ Cơ sở dữ liệu & Tạo Dữ liệu (Database Schema Design & Data Generation)**
+- **Hạn chế về Dữ liệu (Data Scarcity & Interaction types):**
 
-- Xác định và xây dựng cấu trúc dữ liệu cho các thực thể chính: Users (Người dùng), Clubs (Câu lạc bộ), Courts (Sân), Bookings (Đặt sân), Operations (Vận hành).
-- Tạo dữ liệu tổng hợp (synthetic data) mô phỏng môi trường thực tế.
-- Đảm bảo dữ liệu có tính liên kết và phản ánh đúng hành vi người dùng.
+  - **Vấn đề:** Lượng dữ liệu còn khá ít và quan trọng hơn là chỉ có một loại tương tác duy nhất là "Booking" (Đặt sân). Việc thiếu các tương tác dẫn dắt như "View" (Xem) hay "Click" khiến mô hình khó nắm bắt được sở thích tiềm ẩn của người dùng.
+  - **Hệ quả:** Điểm số đánh giá (metrics) của mô hình sau khi train khá thấp, gây ra sự hoài nghi lớn về độ chính xác và hiệu quả thực tế của các gợi ý.
 
-**2. Các nguyên tắc cơ bản của Hệ thống Gợi ý (Recommendation System Fundamentals)**
+- **Vấn đề Kiểm chứng (Validation Blockers):**
 
-- Nghiên cứu và so sánh các thuật toán gợi ý:
-  - Collaborative Filtering (Lọc cộng tác)
-  - Content-based Filtering (Lọc dựa trên nội dung)
-  - Matrix Factorization (Phân rã ma trận)
-- Hiểu rõ cách mỗi mô hình hoạt động và trường hợp sử dụng phù hợp.
+  - Do giao diện Website (Frontend) chưa hoàn thiện, tôi chưa thể thực hiện kiểm tra thực tế (Visual check) để xem các gợi ý có hợp lý với mắt thường hay không. Hiện tại chỉ có thể dựa vào các chỉ số khô khan.
 
-**3. Triển khai AWS Personalize (AWS Personalize Implementation)**
-
-- Nắm vững quy trình đầu cuối (end-to-end) của Amazon Personalize:
-  - **Data Ingestion (Nhập dữ liệu):** chuẩn hóa schema JSON, tải dữ liệu lên S3, nhập vào Personalize.
-  - **Model Training (Huấn luyện mô hình):** hiểu Hyperparameters (Siêu tham số) và cách điều chỉnh.
-  - **Evaluation (Đánh giá):** đọc và phân tích các Metrics (Chỉ số) đánh giá để xác định độ chính xác của mô hình.
-
-**4. Mô hình hóa Tương tác (Interaction Modeling)**
-
-- Giải quyết bài toán "cold start" (khởi động lạnh) và thiếu dữ liệu bằng cách chọn Booking làm tín hiệu tương tác chính (high-intent interaction - tương tác có ý định cao).
-- Điều chỉnh chiến lược mô hình để phù hợp với dữ liệu tổng hợp, trong bối cảnh thiếu các tương tác như xem/nhấp chuột (view/click).
-
-**5. Chiến lược Tiền xử lý Dữ liệu (Data Pre-processing Strategy)**
-
-- Xây dựng hệ thống logic để gán điểm cho các tương tác.
-- Làm sạch dữ liệu, chuẩn hóa định dạng và đảm bảo tuân thủ yêu cầu nghiêm ngặt của Personalize.
-- Chuẩn bị dataset hoàn chỉnh để sẵn sàng cho bước train mô hình.
+- **Quản lý thay đổi Dữ liệu (Schema Evolution):**
+  - Việc phát sinh thêm các trường thông tin mới trong quá trình phát triển đã gây khó khăn cho luồng xử lý dữ liệu (pipeline). Mỗi lần thay đổi cấu trúc dữ liệu đòi hỏi phải làm sạch lại, map lại schema và train lại mô hình từ đầu, tốn khá nhiều thời gian và công sức.

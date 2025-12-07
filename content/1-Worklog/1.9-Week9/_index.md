@@ -1,6 +1,6 @@
 ---
 title: "Week 9 Worklog"
-date: "2025-11-03"
+date: "2025-11-10"
 weight: 1
 chapter: false
 pre: " <b> 1.9. </b> "
@@ -10,55 +10,37 @@ pre: " <b> 1.9. </b> "
 ⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
 {{% /notice %}}
 
-### Week 7 Goals:
+### Week 9 Goals:
 
-- Connect and get to know members of the First Cloud Journey.
-- Understand basic AWS services, how to use the Console & CLI.
+- Build and train the Recommendation Model.
+- Refine data and handle issues arising during the training process.
 
 ### Tasks to be implemented this week:
 
-# Week 7 – Project Data Engineering & Intelligent Recommendations Deployment with AWS Personalize
+# Week 9: Model Building & Data Refinement
 
-| Day   | Task                                                                                                                                                                                                                                   | Start Date | Completion Date | Reference              |
-| :---- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------- | :-------------- | :--------------------- |
-| **2** | - Design and build data for the project<br>- user<br>- club<br>- court<br>- booking<br>- operation                                                                                                                                     | 03/11/2025 | 03/11/2025      |                        |
-| **3** | - Research recommendation system models:<br>- Collaborative Filtering<br>- Content-based Filtering<br>- Matrix Factorization CF                                                                                                        | 04/11/2025 | 04/11/2025      | documents              |
-| **4** | - Research required data for training Personalize, how to import data to S3 buckets, how Personalize fetches data from buckets, schema formatting<br>- Understand evaluation metrics, accuracy types, and Hyperparameters of the model | 05/11/2025 | 05/11/2025      | Video 1<br><br>Video 2 |
-| **5** | - Process data for the model                                                                                                                                                                                                           | 06/11/2025 | 07/11/2025      |                        |
-| **6** |                                                                                                                                                                                                                                        |            |                 |                        |
+| Day   | Task                                                                                                                                          | Start Date | Completion Date | Reference            |
+| :---- | :-------------------------------------------------------------------------------------------------------------------------------------------- | :--------- | :-------------- | :------------------- |
+| **2** | **Model Building:**<br>- Configure model recipe<br>- Create dataset import job<br>- Run training process                                      | 10/11/2025 | 11/11/2025      | AWS Personalize Docs |
+| **3** | Preliminary model check and error analysis                                                                                                    | 12/11/2025 | 12/11/2025      |                      |
+| **4** | **Data Refinement & Update:**<br>- Add new fields to the Schema<br>- Clean and resynchronize the dataset<br>- Retrain model with updated data | 12/11/2025 | 13/11/2025      |                      |
+| **5** | Re-evaluate metrics after data update                                                                                                         | 14/11/2025 | 14/11/2025      |                      |
+| **6** |                                                                                                                                               |            |                 |                      |
 
 ---
 
-### Week 7 Achievements
+### Week 9 achievement: Challenges in Model Training and Data Quality
 
-**1. Database Schema Design & Data Generation**
+This week focused heavily on model training techniques, and I faced real-world Data Science challenges:
 
-- Defined and built data structures for key entities: Users, Clubs, Courts, Bookings, Operations.
-- Generated synthetic data simulating a real-world environment.
-- Ensured data consistency and accurate reflection of user behavior.
+- **Data Scarcity & Interaction Limitations:**
 
-**2. Recommendation System Fundamentals**
+  - **Issue:** The dataset volume is limited, and critically, there is only one interaction type: "Booking". The lack of high-funnel interactions like "View" or "Click" makes it difficult for the model to capture latent user preferences.
+  - **Consequence:** The model's evaluation metrics after training are relatively low, leading to significant skepticism regarding the accuracy and practical effectiveness of the recommendations.
 
-- Researched and compared recommendation algorithms:
-  - Collaborative Filtering
-  - Content-based Filtering
-  - Matrix Factorization
-- Understood how each model works and its appropriate use cases.
+- **Validation Blockers:**
 
-**3. AWS Personalize Implementation**
+  - Since the Website Frontend is not yet complete, I cannot perform real-world validation (visual checks) to see if the recommendations make sense intuitively. Currently, I rely solely on abstract metrics.
 
-- Mastered the end-to-end process of Amazon Personalize:
-  - **Data Ingestion:** Standardizing JSON schema, uploading data to S3, importing into Personalize.
-  - **Model Training:** Understanding Hyperparameters and how to tune them.
-  - **Evaluation:** Reading and analyzing evaluation Metrics to determine model accuracy.
-
-**4. Interaction Modeling**
-
-- Solved the "cold start" problem and data scarcity by selecting Booking as the primary interaction signal (high-intent interaction).
-- Adjusted the modeling strategy to fit synthetic data, in the context of lacking interactions like view/click.
-
-**5. Data Pre-processing Strategy**
-
-- Built logic to assign scores to interactions.
-- Cleaned data, standardized formats, and ensured compliance with Personalize's strict requirements.
-- Prepared the complete dataset, ready for model training.
+- **Data Schema Evolution:**
+  - The addition of new data fields during development caused friction in the data processing pipeline. Every schema change required re-cleaning the data, re-mapping the schema, and retraining the model from scratch, which was time-consuming.
