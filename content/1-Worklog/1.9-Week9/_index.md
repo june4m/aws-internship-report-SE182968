@@ -1,59 +1,64 @@
 ---
 title: "Week 9 Worklog"
-date: "2025-09-08"
+date: "2025-11-03"
 weight: 1
 chapter: false
 pre: " <b> 1.9. </b> "
 ---
 
 {{% notice warning %}}
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
+⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
 {{% /notice %}}
 
-### Week 9 Objectives:
+### Week 7 Goals:
 
-- Connect and get acquainted with members of First Cloud Journey.
-- Understand basic AWS services, how to use the console & CLI.
+- Connect and get to know members of the First Cloud Journey.
+- Understand basic AWS services, how to use the Console & CLI.
 
-### Tasks to be carried out this week:
+### Tasks to be implemented this week:
 
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP <br>                              | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+# Week 7 – Project Data Engineering & Intelligent Recommendations Deployment with AWS Personalize
 
-### Week 9 Achievements:
+| Day   | Task                                                                                                                                                                                                                                   | Start Date | Completion Date | Reference              |
+| :---- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------- | :-------------- | :--------------------- |
+| **2** | - Design and build data for the project<br>- user<br>- club<br>- court<br>- booking<br>- operation                                                                                                                                     | 03/11/2025 | 03/11/2025      |                        |
+| **3** | - Research recommendation system models:<br>- Collaborative Filtering<br>- Content-based Filtering<br>- Matrix Factorization CF                                                                                                        | 04/11/2025 | 04/11/2025      | documents              |
+| **4** | - Research required data for training Personalize, how to import data to S3 buckets, how Personalize fetches data from buckets, schema formatting<br>- Understand evaluation metrics, accuracy types, and Hyperparameters of the model | 05/11/2025 | 05/11/2025      | Video 1<br><br>Video 2 |
+| **5** | - Process data for the model                                                                                                                                                                                                           | 06/11/2025 | 07/11/2025      |                        |
+| **6** |                                                                                                                                                                                                                                        |            |                 |                        |
 
-- Understood what AWS is and mastered the basic service groups:
+---
 
-  - Compute
-  - Storage
-  - Networking
-  - Database
-  - ...
+### Week 7 Achievements
 
-- Successfully created and configured an AWS Free Tier account.
+**1. Database Schema Design & Data Generation**
 
-- Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+- Defined and built data structures for key entities: Users, Clubs, Courts, Bookings, Operations.
+- Generated synthetic data simulating a real-world environment.
+- Ensured data consistency and accurate reflection of user behavior.
 
-- Installed and configured AWS CLI on the computer, including:
+**2. Recommendation System Fundamentals**
 
-  - Access Key
-  - Secret Key
-  - Default Region
-  - ...
+- Researched and compared recommendation algorithms:
+  - Collaborative Filtering
+  - Content-based Filtering
+  - Matrix Factorization
+- Understood how each model works and its appropriate use cases.
 
-- Used AWS CLI to perform basic operations such as:
+**3. AWS Personalize Implementation**
 
-  - Check account & configuration information
-  - Retrieve the list of regions
-  - View EC2 service
-  - Create and manage key pairs
-  - Check information about running services
-  - ...
+- Mastered the end-to-end process of Amazon Personalize:
+  - **Data Ingestion:** Standardizing JSON schema, uploading data to S3, importing into Personalize.
+  - **Model Training:** Understanding Hyperparameters and how to tune them.
+  - **Evaluation:** Reading and analyzing evaluation Metrics to determine model accuracy.
 
-- Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-- ...
+**4. Interaction Modeling**
+
+- Solved the "cold start" problem and data scarcity by selecting Booking as the primary interaction signal (high-intent interaction).
+- Adjusted the modeling strategy to fit synthetic data, in the context of lacking interactions like view/click.
+
+**5. Data Pre-processing Strategy**
+
+- Built logic to assign scores to interactions.
+- Cleaned data, standardized formats, and ensured compliance with Personalize's strict requirements.
+- Prepared the complete dataset, ready for model training.

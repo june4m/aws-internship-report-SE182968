@@ -1,6 +1,6 @@
 ---
 title: "Worklog Tuần 7"
-date: "2025-09-08"
+date: "2025-10-20"
 weight: 1
 chapter: false
 pre: " <b> 1.7. </b> "
@@ -12,53 +12,33 @@ pre: " <b> 1.7. </b> "
 
 ### Mục tiêu tuần 7:
 
-- Kết nối, làm quen với các thành viên trong First Cloud Journey.
-- Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+- Hệ thống hóa toàn bộ kiến thức đã học ở nửa đầu chương trình.
+- Tập trung sâu vào hai trụ cột chính: Bảo mật (Security) và Tính kiên cường (Resiliency).
+- Chuẩn bị nền tảng vững chắc cho kỳ thi giữa kỳ.
 
 ### Các công việc cần triển khai trong tuần này:
 
-# Tuần 7 – Kỹ thuật Dữ liệu Dự án & Triển khai Gợi ý Thông minh với AWS Personalize
+# Tuần 7: Ôn tập Kiến thức cốt lõi & Chuẩn bị thi giữa kỳ
 
-| Ngày  | Nhiệm vụ                                                                                                                                                                                                                                                                            | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo     |
-| :---- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------- | :-------------- | :--------------------- |
-| **2** | - Thiết kế, xây dựng dữ liệu cho dự án<br>- user (người dùng)<br>- club (câu lạc bộ)<br>- court (sân)<br>- booking (đặt sân)<br>- operation (vận hành)                                                                                                                              | 03/11/2025   | 03/11/2025      |                        |
-| **3** | - Tìm hiểu về các mô hình cho hệ thống gợi ý:<br>- Lọc cộng tác (Collaborative Filtering)<br>- Lọc dựa trên nội dung (Content based)<br>- Phân rã ma trận (Matrix Factorization CF)                                                                                                 | 04/11/2025   | 04/11/2025      | tài liệu               |
-| **4** | - Tìm hiểu về dữ liệu cần thiết để huấn luyện (train) Personalize, cách nhập (import) dữ liệu lên S3 buckets và cách Personalize lấy dữ liệu từ bucket, định dạng schema<br>- Hiểu về các chỉ số (metrics) đánh giá, loại độ chính xác và Siêu tham số (Hyperparameter) của mô hình | 05/11/2025   | 05/11/2025      | Video 1<br><br>Video 2 |
-| **5** | - Xử lý dữ liệu cho mô hình                                                                                                                                                                                                                                                         | 06/11/2025   | 07/11/2025      |                        |
-| **6** |                                                                                                                                                                                                                                                                                     |              |                 |                        |
+| Ngày  | Nhiệm vụ                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| :---- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------- | :-------------- | :----------------- |
+| **2** | **Ôn tập Giữa kỳ (Midterm Review):**<br><br>**Phần 1: Kiến trúc Bảo mật (Secure Architecture)**<br>- IAM (Quản lý danh tính & truy cập)<br>- KMS (Quản lý khóa mã hóa)<br>- Security Group & NACLs (Tường lửa mạng)<br>- Secrets Manager (Quản lý bí mật)<br>- GuardDuty (Phát hiện mối đe dọa)<br>- Shield & WAF (Bảo vệ DDoS & Ứng dụng Web)<br><br>**Phần 2: Kiến trúc Kiên cường (Resilient Architecture)**<br>- Các chỉ số cốt lõi cần ghi nhớ (RTO/RPO)<br>- Multi-AZ RDS (Cơ sở dữ liệu đa vùng)<br>- Các chiến lược Phục hồi thảm họa (DR Strategies)<br>- Auto Scaling và Load Balancing<br>- Route 53 và DNS<br>- AWS Backup | 20/10/2025   | 20/10/2025      | Link ôn tập        |
+| **3** | Tự ôn tập: Hệ thống hóa lại các dịch vụ bảo mật và thực hành Lab mô phỏng                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | 21/10/2025   | 21/10/2025      |                    |
+| **4** | Tự ôn tập: Vẽ lại sơ đồ kiến trúc High Availability (HA) và Disaster Recovery (DR)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | 22/10/2025   | 22/10/2025      |                    |
+| **5** | Làm các bài kiểm tra thử (Practice Tests) để rà soát kiến thức                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | 23/10/2025   | 23/10/2025      |                    |
+| **6** | Tổng hợp các câu hỏi thắc mắc và xem lại các ghi chú quan trọng                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | 24/10/2025   | 24/10/2025      |                    |
 
 ---
 
-### Kết quả đạt được trong tuần 7
+### Thu Hoạch Tuần 7: Củng Cố Tư Duy Bảo Mật và Kiến Trúc Bền Vững
 
-**1. Thiết kế Sơ đồ Cơ sở dữ liệu & Tạo Dữ liệu (Database Schema Design & Data Generation)**
+- **Tư duy Bảo mật Đa lớp (Defense in Depth):**
 
-- Xác định và xây dựng cấu trúc dữ liệu cho các thực thể chính: Users (Người dùng), Clubs (Câu lạc bộ), Courts (Sân), Bookings (Đặt sân), Operations (Vận hành).
-- Tạo dữ liệu tổng hợp (synthetic data) mô phỏng môi trường thực tế.
-- Đảm bảo dữ liệu có tính liên kết và phản ánh đúng hành vi người dùng.
+  - Đã phân biệt rõ ràng sự khác biệt và phạm vi áp dụng của **Security Group** (Stateful - cấp Instance) và **NACLs** (Stateless - cấp Subnet).
+  - Hiểu sâu về cách bảo vệ ứng dụng ở các tầng khác nhau: **WAF** cho tầng ứng dụng (Layer 7), **Shield** cho hạ tầng (Layer 3/4), và **GuardDuty** để giám sát thông minh các hành vi bất thường.
+  - Nắm vững tầm quan trọng của **KMS** và **Secrets Manager** trong việc bảo vệ dữ liệu nhạy cảm "at rest" và "in transit".
 
-**2. Các nguyên tắc cơ bản của Hệ thống Gợi ý (Recommendation System Fundamentals)**
-
-- Nghiên cứu và so sánh các thuật toán gợi ý:
-  - Collaborative Filtering (Lọc cộng tác)
-  - Content-based Filtering (Lọc dựa trên nội dung)
-  - Matrix Factorization (Phân rã ma trận)
-- Hiểu rõ cách mỗi mô hình hoạt động và trường hợp sử dụng phù hợp.
-
-**3. Triển khai AWS Personalize (AWS Personalize Implementation)**
-
-- Nắm vững quy trình đầu cuối (end-to-end) của Amazon Personalize:
-  - **Data Ingestion (Nhập dữ liệu):** chuẩn hóa schema JSON, tải dữ liệu lên S3, nhập vào Personalize.
-  - **Model Training (Huấn luyện mô hình):** hiểu Hyperparameters (Siêu tham số) và cách điều chỉnh.
-  - **Evaluation (Đánh giá):** đọc và phân tích các Metrics (Chỉ số) đánh giá để xác định độ chính xác của mô hình.
-
-**4. Mô hình hóa Tương tác (Interaction Modeling)**
-
-- Giải quyết bài toán "cold start" (khởi động lạnh) và thiếu dữ liệu bằng cách chọn Booking làm tín hiệu tương tác chính (high-intent interaction - tương tác có ý định cao).
-- Điều chỉnh chiến lược mô hình để phù hợp với dữ liệu tổng hợp, trong bối cảnh thiếu các tương tác như xem/nhấp chuột (view/click).
-
-**5. Chiến lược Tiền xử lý Dữ liệu (Data Pre-processing Strategy)**
-
-- Xây dựng hệ thống logic để gán điểm cho các tương tác.
-- Làm sạch dữ liệu, chuẩn hóa định dạng và đảm bảo tuân thủ yêu cầu nghiêm ngặt của Personalize.
-- Chuẩn bị dataset hoàn chỉnh để sẵn sàng cho bước train mô hình.
+- **Kiến trúc Bền vững & Khả năng Phục hồi (Resiliency & Recovery):**
+  - Ghi nhớ và hiểu bản chất của các chỉ số **RTO (Recovery Time Objective)** và **RPO (Recovery Point Objective)** để lựa chọn chiến lược DR phù hợp (Backup & Restore, Pilot Light, Warm Standby, hay Multi-site Active/Active).
+  - Nắm vững cơ chế **Multi-AZ RDS** để đảm bảo tính sẵn sàng cao (High Availability) so với Read Replica (dùng để mở rộng khả năng đọc).
+  - Hiểu rõ sự phối hợp giữa **Route 53, ELB và Auto Scaling** để tạo nên một hệ thống linh hoạt, tự động phục hồi khi có sự cố và chịu tải tốt.

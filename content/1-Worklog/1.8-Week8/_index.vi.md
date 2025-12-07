@@ -1,6 +1,6 @@
 ---
 title: "Worklog Tuần 8"
-date: "2025-09-08"
+date: "2025-10-27"
 weight: 1
 chapter: false
 pre: " <b> 1.8. </b> "
@@ -12,48 +12,36 @@ pre: " <b> 1.8. </b> "
 
 ### Mục tiêu tuần 8:
 
-- Kết nối, làm quen với các thành viên trong First Cloud Journey.
-- Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+- Tổng hợp và củng cố kiến thức đã học từ các tuần trước.
+- Ôn tập các mẫu kiến trúc quan trọng (Hiệu năng cao & Tối ưu chi phí).
+- Hoàn thành bài kiểm tra giữa kỳ (Midterm Exam).
 
 ### Các công việc cần triển khai trong tuần này:
 
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP <br>                    | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+# Tuần 8: Ôn tập và Thi giữa kỳ
 
-### Kết quả đạt được tuần 8:
+| Ngày  | Nhiệm vụ                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| :---- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------- | :-------------- | :----------------- |
+| **2** | **Ôn tập giữa kỳ:**<br>1. **Phần 3: Kiến trúc Hiệu năng cao (High Performance Architecture):**<br>- AWS Fargate - Container phi máy chủ<br>- AWS Lambda - Kiến trúc hướng sự kiện (Event-Driven)<br>- Auto Scaling với CloudWatch<br>2. **Phần 4: Kiến trúc Tối ưu chi phí (Cost-optimized Architecture)**<br>- AWS Cost Explorer - Phân tích & Tối ưu chi phí<br>- Phân cấp lưu trữ S3 (S3 Storage Tiering) - Tối ưu tự động theo vòng đời<br>- Kiến trúc VPC hoàn chỉnh với NAT Gateway | 27/10/2025   | 27/10/2025      | Link ôn tập        |
+| **3** | Tự học và hệ thống hóa kiến thức                                                                                                                                                                                                                                                                                                                                                                                                                                                          | 28/10/2025   | 28/10/2025      |                    |
+| **4** | Luyện tập các bài test thử và rà soát kiến thức                                                                                                                                                                                                                                                                                                                                                                                                                                           | 29/10/2025   | 29/10/2025      |                    |
+| **5** | Chuẩn bị kỹ càng cho kỳ thi                                                                                                                                                                                                                                                                                                                                                                                                                                                               | 30/10/2025   | 30/10/2025      |                    |
+| **6** | **Thi giữa kỳ (Midterm Exam)**                                                                                                                                                                                                                                                                                                                                                                                                                                                            | 31/10/2025   | 31/10/2025      |                    |
 
-- Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản:
+---
 
-  - Compute
-  - Storage
-  - Networking
-  - Database
-  - ...
+### Thu Hoạch Tuần 8: Củng Cố Kiến Trúc Hiệu Năng Cao & Tối Ưu Chi Phí
 
-- Đã tạo và cấu hình AWS Free Tier account thành công.
+- **Làm chủ Kiến trúc Hiệu năng cao (High-Performance Architecture Mastery):**
 
-- Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+  - Hiểu sâu sắc sự khác biệt giữa **Serverless Containers (AWS Fargate)** và **Tính toán hướng sự kiện (AWS Lambda)**, biết cách áp dụng từng loại để tối ưu hiệu năng.
+  - Củng cố cơ chế hoạt động của **Auto Scaling** dựa trên các chỉ số (metrics) từ CloudWatch để đảm bảo hệ thống ổn định dưới các mức tải khác nhau.
 
-- Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
+- **Chiến lược Tối ưu hóa Chi phí (Cost Optimization Strategies):**
 
-  - Access Key
-  - Secret Key
-  - Region mặc định
-  - ...
+  - Thành thạo việc sử dụng **AWS Cost Explorer** để phân tích xu hướng chi tiêu.
+  - Nắm vững **S3 Storage Tiering** và các chính sách vòng đời (Lifecycle policies) để tự động hóa việc tiết kiệm chi phí lưu trữ.
+  - Hiểu rõ bài toán chi phí mạng lưới, đặc biệt tập trung vào **NAT Gateway** trong một kiến trúc VPC hoàn chỉnh.
 
-- Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  - Kiểm tra thông tin tài khoản & cấu hình
-  - Lấy danh sách region
-  - Xem dịch vụ EC2
-  - Tạo và quản lý key pair
-  - Kiểm tra thông tin dịch vụ đang chạy
-  - ...
-
-- Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-- ...
+- **Kiểm chứng Kiến thức (Knowledge Validation):**
+  - Đã hoàn thành bài **Thi giữa kỳ**, chứng minh khả năng thiết kế các kiến trúc cân bằng giữa hiệu năng, bảo mật và chi phí. Kỳ thi giúp nhận diện rõ các điểm mạnh về mạng (networking) và các điểm cần cải thiện thêm về điều phối serverless.
