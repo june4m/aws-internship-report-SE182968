@@ -10,7 +10,7 @@ pre: " <b> 4.2. </b> "
 ⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
 {{% /notice %}}
 
-# Event Recap: “Data Resiliency in a Cloud-first World”
+# Data Resiliency in a Cloud-first World
 
 ### Event Objectives
 

@@ -10,7 +10,7 @@ pre: " <b> 4.3. </b> "
 ⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
 {{% /notice %}}
 
-# Bài thu hoạch “Data Science on AWS”
+# Data Science on AWS
 
 ### Mục Đích Của Sự Kiện
 

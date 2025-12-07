@@ -10,7 +10,7 @@ pre: " <b> 4.2. </b> "
 ⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
 {{% /notice %}}
 
-# Bài thu hoạch “Data Resiliency in a Cloud-first World”
+# Data Resiliency in a Cloud-first World
 
 ### Mục Đích Của Sự Kiện
 

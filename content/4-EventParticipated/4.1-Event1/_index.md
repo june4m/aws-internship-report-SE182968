@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 4.1. </b> "
 ---
 
-# Event Recap: “Vietnam Cloud Day”
+# Vietnam Cloud Day
 
 ### Event Objectives
 

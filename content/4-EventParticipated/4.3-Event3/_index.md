@@ -10,7 +10,7 @@ pre: " <b> 4.3. </b> "
 ⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
 {{% /notice %}}
 
-# Event Recap: “Data Science on AWS”
+# Data Science on AWS
 
 ### Event Objectives
 

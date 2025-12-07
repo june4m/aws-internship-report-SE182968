@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 4.1. </b> "
 ---
 
-# Báo cáo tổng kết sự kiện: “Vietnam Cloud Day”
+# Vietnam Cloud Day
 
 ### Mục tiêu sự kiện
 
