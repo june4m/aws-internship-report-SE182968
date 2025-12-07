@@ -1,0 +1,39 @@
+---
+title: "Worklog Tuần 2"
+date: "2025-09-08"
+weight: 1
+chapter: false
+pre: " <b> 1.2. </b> "
+---
+
+{{% notice warning %}}
+⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
+{{% /notice %}}
+
+### Mục tiêu tuần 2:
+
+- Kết nối, làm quen với các thành viên trong First Cloud Journey.
+- Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+
+### Các công việc cần triển khai trong tuần này:
+
+# Tuần 2: Thực hành trên trang dịch vụ của AWS
+
+| Ngày  | Nhiệm vụ                                                                                                                                                                                                                                                                                                                                                                                    | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo                                                                              |
+| :---- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :----------- | :-------------- | :---------------------------------------------------------------------------------------------- |
+| **2** | - Tạo tài khoản AWS và thiết lập MFA (Xác thực đa yếu tố)<br>- Tạo nhóm quản trị (admin group) và người dùng quản trị (admin user)<br>- Xác thực<br>- Tạo ngân sách và quản lý ngân sách chi phí (budget)<br>- Tìm hiểu một số gói hỗ trợ trong AWS                                                                                                                                         | 15/09/2025   | 15/09/2025      | - MFA cho tài khoản AWS<br>- Tạo nhóm Admin và người dùng Admin                                 |
+| **3** | **Tìm hiểu lý thuyết:**<br>- VPC (Virtual Private Cloud)<br>- Subnet<br>- Route Table (Bảng định tuyến)<br>- Internet Gateway<br>- Security Group (Nhóm bảo mật)<br>- Network Access Control List (Network ACLs)<br><br>**Thực hành:**<br>- Tạo VPC, subnet, Internet Gateway, Route Table, Security Group, EC2 Instance, NAT Gateway<br>- Kiểm tra kết nối (thất bại) → Dọn dẹp tài nguyên | 16/09/2025   | 16/09/2025      | - Giới thiệu về Amazon VPC<br>- Subnets<br>- Route Table<br>- Internet Gateway<br>- NAT Gateway |
+| **4** | - Thực hành lại và kiểm tra kết nối<br>- Tìm hiểu và thực hành thiết lập hệ thống Hybrid DNS với Route 53                                                                                                                                                                                                                                                                                   | 17/09/2025   | 17/09/2025      | Route 53                                                                                        |
+| **5** | - Tham dự sự kiện AWS Vietnam Cloud Day                                                                                                                                                                                                                                                                                                                                                     | 18/09/2025   | 18/09/2025      |                                                                                                 |
+| **6** | - Thực hành thiết lập VPC Peering<br>- Thiết lập Transit Gateway                                                                                                                                                                                                                                                                                                                            | 19/09/2025   | 19/09/2025      | - VPC Peering<br>- Transit Gateway                                                              |
+
+---
+
+### Thu Hoạch Tuần 2
+
+Tôi tập trung vào bảo mật tài khoản, quản lý chi phí và triển khai các kiến trúc mạng phức tạp.
+
+- **Bảo mật & Quản trị Tài khoản (Account Security & Governance):** Đã thực hiện thành công các bước bảo mật tối quan trọng như MFA và áp dụng các phương pháp tốt nhất cho IAM (sử dụng Admin User thay vì Root). Việc thiết lập AWS Budgets là một thói quen tốt cần duy trì.
+- **Triển khai VPC & Khắc phục sự cố (VPC Deployment & Troubleshooting):** Tôi đã tự triển khai được kiến trúc VPC đầy đủ (IGW, NAT Gateway) và quan trọng nhất là trải nghiệm việc Troubleshooting. Lỗi kết nối (dù gây mất thời gian) là bài học đắt giá nhất, giúp tôi hiểu rõ vai trò của từng thành phần trong Route Table và Security Group.
+- **Mạng nâng cao (Advanced Networking):** Đã nắm được cách kết nối mạng mở rộng (VPC Peering và Transit Gateway) và bắt đầu tiếp cận Hybrid Cloud qua Route 53 Resolver.
+- **Kết nối thực tế (Industry Engagement):** Tham dự AWS Vietnam Cloud Day đã cung cấp bối cảnh thực tế và xu hướng công nghệ, kết nối kiến thức học được với ứng dụng trong ngành.
