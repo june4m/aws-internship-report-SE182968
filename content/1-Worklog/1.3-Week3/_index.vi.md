@@ -31,8 +31,6 @@ pre: " <b> 1.3. </b> "
 
 ### Thu Hoạch Tuần 3: Nền Tảng Compute Vững Chắc và Quản Lý Lưu Trữ Đa Dạng
 
-Tuần 3 là một bước tiến lớn, chuyển sự tập trung từ mạng sang các dịch vụ Compute và Lưu trữ.
-
 - **Kết nối mạng nâng cao (Advanced Network Connectivity):** Đã hoàn thiện cấu hình Transit Gateway (TGW), củng cố mô hình mạng trung tâm (hub-and-spoke) cho khả năng mở rộng trong tương lai.
 - **Amazon EC2 & Khả năng mở rộng (Scalability):**
   - Nắm vững kiến trúc EC2, từ việc chọn Instance Type đến cơ chế tự động hóa bằng User Data.

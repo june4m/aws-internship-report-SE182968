@@ -31,8 +31,6 @@ Tuần 5 – Quản trị Bảo mật Đám mây, Khám phá Serverless & Khởi
 
 ### Thu Hoạch Tuần 5: Quản Trị, Bảo Mật và Tư Duy Serverless
 
-Tuần 5 là một bước ngoặt lớn, chuyển đổi tư duy từ hạ tầng ảo sang mô hình phi máy chủ (Serverless) và tập trung vào quản trị doanh nghiệp.
-
 - **Quản lý Bảo mật & Danh tính AWS (AWS Security & Identity Management):** Đã củng cố kiến thức về Mô hình Trách nhiệm Chia sẻ (Shared Responsibility) và các công cụ quản lý danh tính (Cognito, Identity Center). Nắm vững vai trò của KMS và Security Hub trong việc đảm bảo trạng thái bảo mật tổng thể.
 - **Nghiên cứu Kiến trúc Serverless (Serverless Architecture Research):** Đã hoàn thành việc nghiên cứu sâu về mô hình Serverless, tập trung vào Lambda, API Gateway, và DynamoDB. Đây là nền tảng cho việc triển khai dự án nhóm.
 - **Khởi động Dự án Cuối khóa (Capstone Project Initiation):** Đã làm việc nhóm hiệu quả để thống nhất kiến trúc (sử dụng Serverless), phân chia nhiệm vụ, và thiết lập môi trường phát triển ban đầu. Dự án sẽ là cơ hội để áp dụng toàn bộ kiến thức đã học vào thực tế.

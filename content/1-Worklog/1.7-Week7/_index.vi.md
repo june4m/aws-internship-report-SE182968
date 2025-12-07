@@ -31,8 +31,6 @@ pre: " <b> 1.7. </b> "
 
 ### Kết quả đạt được trong tuần 7
 
-Tuần này tập trung vào phần “bộ não” của dự án: thiết kế kiến trúc dữ liệu và chuẩn bị tập dữ liệu (dataset) để huấn luyện mô hình gợi ý bằng Amazon Personalize.
-
 **1. Thiết kế Sơ đồ Cơ sở dữ liệu & Tạo Dữ liệu (Database Schema Design & Data Generation)**
 
 - Xác định và xây dựng cấu trúc dữ liệu cho các thực thể chính: Users (Người dùng), Clubs (Câu lạc bộ), Courts (Sân), Bookings (Đặt sân), Operations (Vận hành).

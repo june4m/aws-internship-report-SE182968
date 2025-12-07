@@ -31,8 +31,6 @@ pre: " <b> 1.4. </b> "
 
 ### Thu Hoạch Tuần 4: Nắm Vững Lưu Trữ Đối Tượng và Chiến Lược DR
 
-Tuần 4 đã cung cấp cái nhìn sâu sắc và toàn diện về cách quản lý dữ liệu không có cấu trúc trên Cloud.
-
 - **Năng lực cốt lõi về Amazon S3 (Amazon S3 Core Competencies):** Đã làm chủ việc cấu hình S3, từ các Lớp lưu trữ (Storage Classes) để tối ưu chi phí đến tính năng Lập phiên bản (Versioning) để bảo vệ dữ liệu. Thành thạo việc triển khai Hosting Website tĩnh và cấu hình bảo mật với Bucket Policies và CORS.
 - **Bảo vệ & Quản lý Dữ liệu (Data Protection & Management):** Hiểu rõ các giải pháp lưu trữ dữ liệu lớn và Hybrid (Snow Family, Storage Gateway). Quan trọng hơn, đã biết cách tự động hóa quản lý dữ liệu bằng các Quy tắc vòng đời (Life Cycle Rules) và thiết lập Sao chép chéo vùng (Cross-Region Replication).
 - **Phục hồi Thảm họa (Disaster Recovery - DR):** Đã phân tích được mối quan hệ giữa các chỉ số kinh doanh (RTO/RPO) và 4 mô hình DR khác nhau. Đây là kiến thức nền tảng quan trọng cho việc thiết kế kiến trúc tin cậy (Reliability).

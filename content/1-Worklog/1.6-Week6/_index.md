@@ -1,37 +1,35 @@
 ---
-title: "Worklog Tuần 6"
-date: "2025-09-08"
+title: "Week 6 Worklog"
+date: "2025-10-13"
 weight: 1
 chapter: false
 pre: " <b> 1.6. </b> "
 ---
 
 {{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
+⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
 {{% /notice %}}
 
-### Mục tiêu tuần 6:
+### Week 6 Goals:
 
-- Kết nối, làm quen với các thành viên trong First Cloud Journey.
-- Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+- Connect and get to know members of the First Cloud Journey.
+- Understand basic AWS services, how to use the Console & CLI.
 
-### Các công việc cần triển khai trong tuần này:
+### Tasks to be implemented this week:
 
-# Tuần 6 – Thiết kế Kiến trúc Giải pháp, Đề xuất Dự án & Thông tin Chuyên sâu về Dữ liệu
+# Week 6 – Solution Architecture Design, Project Proposal & Data Insights
 
-| Ngày  | Nhiệm vụ                                                                                                          | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
-| :---- | :---------------------------------------------------------------------------------------------------------------- | :----------- | :-------------- | :----------------- |
-| **2** | Bắt đầu vẽ sơ đồ cấu trúc AWS                                                                                     | 13/10/2025   | 13/10/2025      | Sơ đồ kiến trúc    |
-| **3** | Tham dự sự kiện Data Resiliency in a Cloud-first World (Khả năng phục hồi dữ liệu trong thế giới ưu tiên đám mây) | 14/10/2025   | 14/10/2025      |                    |
-| **4** | Viết tài liệu cho bản đề xuất (proposal)                                                                          | 15/10/2025   | 15/10/2025      | Link tài liệu      |
-| **5** | Tham dự sự kiện Data Science on AWS (Khoa học dữ liệu trên AWS)                                                   | 16/10/2025   | 16/10/2025      |                    |
-| **6** |                                                                                                                   | 17/10/2025   | 17/10/2025      |                    |
+| Day   | Task                                                  | Start Date | Completion Date | Reference            |
+| :---- | :---------------------------------------------------- | :--------- | :-------------- | :------------------- |
+| **2** | Start drawing AWS architecture diagrams               | 13/10/2025 | 13/10/2025      | Architecture Diagram |
+| **3** | Attend event "Data Resiliency in a Cloud-first World" | 14/10/2025 | 14/10/2025      |                      |
+| **4** | Write documentation for the proposal                  | 15/10/2025 | 15/10/2025      | Document Link        |
+| **5** | Attend event "Data Science on AWS"                    | 16/10/2025 | 16/10/2025      |                      |
+| **6** |                                                       | 17/10/2025 | 17/10/2025      |                      |
 
 ---
 
-### Thu Hoạch Tuần 6: Hoàn Thiện Thiết Kế Giải Pháp và Định Hướng Dữ Liệu
+### Week 6 Harvest: Finalizing Solution Design and Data Orientation
 
-Tuần 6 là tuần cốt lõi trong việc chuẩn bị, đảm bảo rằng nền tảng thiết kế kỹ thuật của dự án nhóm là vững chắc và phù hợp với các chuẩn mực Cloud.
-
-- **Kiến trúc & Thiết kế Dự án (Project Architecture & Design):** Đã chuyển đổi ý tưởng thành sơ đồ kiến trúc AWS chi tiết. Hoàn thiện Bản đề xuất Dự án (Project Proposal) chính thức, bao gồm các quyết định về công nghệ (Serverless) và các yêu cầu phi chức năng.
-- **Khả năng phục hồi dữ liệu (Data Resiliency):** Hiểu được tầm quan trọng của việc phục hồi dữ liệu khi sự cố trung tâm dữ liệu ở Hàn Quốc xảy ra.
+- **Project Architecture & Design:** Transformed ideas into detailed AWS architecture diagrams. Completed the official Project Proposal, including technology decisions (Serverless) and non-functional requirements.
+- **Data Resiliency:** Understood the importance of data resiliency following the data center incident in Korea.

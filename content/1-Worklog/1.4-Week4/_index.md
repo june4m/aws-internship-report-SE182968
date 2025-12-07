@@ -29,9 +29,7 @@ pre: " <b> 1.4. </b> "
 
 ---
 
-### Week 4 Harvest: Mastering Object Storage and DR Strategies
-
-Week 4 provided a deep and comprehensive insight into managing unstructured data on the Cloud.
+### Week 4 achievement: Mastering Object Storage and DR Strategies
 
 - **Amazon S3 Core Competencies:** Mastered S3 configuration, from Storage Classes for cost optimization to Versioning for data protection. Proficient in deploying Static Website Hosting and configuring security with Bucket Policies and CORS.
 - **Data Protection & Management:** Understood large-scale and Hybrid data storage solutions (Snow Family, Storage Gateway). More importantly, learned how to automate data management using Life Cycle Rules and setup Cross-Region Replication.

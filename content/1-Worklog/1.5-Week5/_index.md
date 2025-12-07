@@ -29,9 +29,7 @@ pre: " <b> 1.5. </b> "
 
 ---
 
-### Week 5 Harvest: Governance, Security, and Serverless Mindset
-
-Week 5 was a major turning point, shifting the mindset from virtual infrastructure to a Serverless model and focusing on enterprise governance.
+### Week 5 achievement: Governance, Security, and Serverless Mindset
 
 - **AWS Security & Identity Management:** Reinforced knowledge of the Shared Responsibility Model and identity management tools (Cognito, Identity Center). Mastered the roles of KMS and Security Hub in ensuring overall security posture.
 - **Serverless Architecture Research:** Completed in-depth research on the Serverless model, focusing on Lambda, API Gateway, and DynamoDB. This is the foundation for the group project deployment.

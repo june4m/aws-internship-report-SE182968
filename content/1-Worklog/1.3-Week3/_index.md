@@ -29,9 +29,7 @@ pre: " <b> 1.3. </b> "
 
 ---
 
-### Week 3 Harvest: Solid Compute Foundation and Diverse Storage Management
-
-Week 3 was a major step forward, shifting focus from networking to Compute and Storage services.
+### Week 3 achievement: Solid Compute Foundation and Diverse Storage Management
 
 - **Advanced Network Connectivity:** Finalized Transit Gateway (TGW) configuration, reinforcing the hub-and-spoke network model for future scalability.
 - **Amazon EC2 & Scalability:**
