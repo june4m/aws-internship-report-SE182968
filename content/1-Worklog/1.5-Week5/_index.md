@@ -14,8 +14,6 @@ pre: " <b> 1.5. </b> "
 
 ### Tasks to be implemented this week:
 
-# Week 5 – Cloud Security Governance, Serverless Exploration & Project Kick-off
-
 | Day   | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference                   |
 | :---- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------- | :-------------- | :-------------------------- |
 | **2** | - Study Module 5 theory: Security services on AWS<br>- Shared Responsibility Model<br>- Amazon IAM<br>- AWS Cognito<br>- AWS Organizations<br>- AWS Identity Center<br>- AWS KMS<br>- AWS Security Hub | 06/10/2025 | 06/10/2025      | - IAM<br>- Cognito<br>- KMS |

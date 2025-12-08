@@ -12,18 +12,15 @@ pre: " <b> 1.3. </b> "
 
 ### Mục tiêu tuần 3:
 
-- Kết nối, làm quen với các thành viên trong First Cloud Journey.
-- Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
-
 ### Các công việc cần triển khai trong tuần này:
 
-| Ngày  | Nhiệm vụ                                                                                                                                                                                                                                                         | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
-| :---- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------- | :-------------- | :----------------- |
-| **2** | Thiết lập Transit Gateway                                                                                                                                                                                                                                        | 22/09/2025   | 22/09/2025      | Transit Gateway    |
-| **3** | - Tìm hiểu lý thuyết về AWS EC2<br>- Loại Instance (Instance type)<br>- AMI/ Sao lưu (Backup)/ Keypair<br>- Elastic Block Store (EBS)<br>- Instance Store<br>- User data/ Meta data<br>- EC2 Auto Scaling<br>- EFS/FSx, Lightsail, MGN<br>- Thực hành bài Lab 13 | 23/09/2025   | 23/09/2025      | EC2                |
-| **4** | Thực hành Module 3 - bài Lab 24                                                                                                                                                                                                                                  | 24/09/2025   | 24/09/2025      |                    |
-| **5** | Thực hành bài Lab 57                                                                                                                                                                                                                                             | 25/09/2025   | 25/09/2025      |                    |
-| **6** |                                                                                                                                                                                                                                                                  | 26/09/2025   | 26/09/2025      |                    |
+| Ngày  | Nhiệm vụ                                                                                                                                                                                                                                                         | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo                                   |
+| :---- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------- | :-------------- | :--------------------------------------------------- |
+| **2** | Thiết lập Transit Gateway                                                                                                                                                                                                                                        | 22/09/2025   | 22/09/2025      | [Transit Gateway](https://000020.awsstudygroup.com/) |
+| **3** | - Tìm hiểu lý thuyết về AWS EC2<br>- Loại Instance (Instance type)<br>- AMI/ Sao lưu (Backup)/ Keypair<br>- Elastic Block Store (EBS)<br>- Instance Store<br>- User data/ Meta data<br>- EC2 Auto Scaling<br>- EFS/FSx, Lightsail, MGN<br>- Thực hành bài Lab 13 | 23/09/2025   | 23/09/2025      | [EC2](https://000004.awsstudygroup.com/)             |
+| **4** | Thực hành Module 3 - bài Lab 24                                                                                                                                                                                                                                  | 24/09/2025   | 24/09/2025      |                                                      |
+| **5** | Thực hành Module 4 - bài Lab 57                                                                                                                                                                                                                                  | 25/09/2025   | 25/09/2025      |                                                      |
+| **6** |                                                                                                                                                                                                                                                                  | 26/09/2025   | 26/09/2025      |                                                      |
 
 ---
 
