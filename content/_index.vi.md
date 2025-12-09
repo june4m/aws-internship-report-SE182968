@@ -17,7 +17,7 @@ chapter: false
 
 &emsp; **Trường:** Đại học FPT TP.HCM
 
-&emsp; **Ngành:** Tri Tue Nhan Tao
+&emsp; **Ngành:** Trí Tuệ Nhân Tạo
 
 &emsp; **Lớp:** AWS082025
 
@@ -25,9 +25,9 @@ chapter: false
 
 &emsp; **Vị trí thực tập:** FCJ Cloud Intern
 
-&emsp; **Thời gian thực tập:** Từ ngày 08/09/2025 đến ngày 12/12/2025
+&emsp; **Thời gian thực tập:** Từ ngày 08/09/2025 đến ngày 28/12/2025
 
-![Ảnh đại diện của bạn](/images/avatar.png)
+![Ảnh đại diện của bạn](/images/avatar.jpg)
 
 ### Nội dung báo cáo
 
