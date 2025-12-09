@@ -162,7 +162,7 @@ The project applies the Agile Scrum model over 8 weeks (4 Sprints):
 | **Testing & Go-live**         | Week 11   | UAT, Security Testing, Performance Optimization.                      | UAT Report, Security Report.                   | 5                   |
 | **Handover & Training**       | Week 12   | Transfer accounts, operations training, handover documentation.       | Operations Manual, Acceptance.                 | 5                   |
 
-### 3.2 OUT OF SCOPE (MVP PHASE)
+### 3.2 OUT OF SCOPE 
 
 Due to time and resource limitations of the MVP phase, the following items are not included:
 

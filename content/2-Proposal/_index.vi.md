@@ -162,7 +162,7 @@ Dự án áp dụng mô hình Agile Scrum trong 8 tuần (4 Sprints):
 | **Testing & Go-live**         | Tuần 11   | UAT, Kiểm thử bảo mật, Tối ưu hiệu năng.                                     | Báo cáo UAT, Báo cáo bảo mật.              | 5                  |
 | **Bàn giao & Đào tạo**        | Tuần 12   | Chuyển giao tài khoản, đào tạo vận hành, bàn giao tài liệu.                  | Tài liệu hướng dẫn vận hành, Nghiệm thu.   | 5                  |
 
-### 3.2 NGOÀI PHẠM VI DỰ ÁN (OUT OF SCOPE) - GIAI ĐOẠN MVP
+### 3.2 NGOÀI PHẠM VI DỰ ÁN (OUT OF SCOPE)
 
 Do giới hạn về thời gian và tài nguyên của giai đoạn MVP, các hạng mục sau chưa được bao gồm:
 
