@@ -16,6 +16,8 @@ pre: " <b> 2. </b> "
 
 **Date:** December 7, 2025
 
+[Download PDF](/images/2-Proposal/AWS-Proposal.pdf)
+
 ---
 
 ## TABLE OF CONTENTS

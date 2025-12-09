@@ -16,6 +16,8 @@ pre: " <b> 2. </b> "
 
 **Ngày lập:** 07/12/2025
 
+[Download PDF](/images/2-Proposal/AWS-Proposal.pdf)
+
 ---
 
 ## MỤC LỤC
