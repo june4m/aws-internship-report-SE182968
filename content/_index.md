@@ -13,15 +13,15 @@ chapter: false
 
 ### Student Information:
 
-&emsp; **Full Name:** Do Khang
+&emsp; **Full Name:** Nguyễn Công Minh
 
-&emsp; **Phone Number:** 0943091761
+&emsp; **Phone Number:** 0363401520
 
-&emsp; **Email:** dokhang307@gmail.com
+&emsp; **Email:** congminh04062004@gmail.com
 
 &emsp; **University:** FPT University HCM
 
-&emsp; **Major:** Artificial Inteligent
+&emsp; **Major:** Software Engineering
 
 &emsp; **Class:** AWS082025
 
@@ -31,7 +31,7 @@ chapter: false
 
 &emsp; **Internship Duration:** From 08/09/2025 to 28/12/2025
 
-![Your profile picture](/images/avatar.png)
+![Ảnh đại diện của bạn](/images/minh.jpg)
 
 ### Report Content
 

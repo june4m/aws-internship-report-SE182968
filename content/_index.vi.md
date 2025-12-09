@@ -9,15 +9,15 @@ chapter: false
 
 ### Thông tin sinh viên:
 
-&emsp; **Họ và tên:** Đỗ Khang
+&emsp; **Họ và tên:** Nguyễn Công Minh
 
-&emsp; **Số điện thoại:** 0943091761
+&emsp; **Số điện thoại:** 0363401520
 
-&emsp; **Email:** dokhang307@gmail.com
+&emsp; **Email:** congminh04062004@gmail.com
 
 &emsp; **Trường:** Đại học FPT TP.HCM
 
-&emsp; **Ngành:** Trí Tuệ Nhân Tạo
+&emsp; **Ngành:** Kĩ sư phần mềm
 
 &emsp; **Lớp:** AWS082025
 
@@ -27,7 +27,7 @@ chapter: false
 
 &emsp; **Thời gian thực tập:** Từ ngày 08/09/2025 đến ngày 28/12/2025
 
-![Ảnh đại diện của bạn](/images/avatar.jpg)
+![Ảnh đại diện của bạn](/images/minh.jpg)
 
 ### Nội dung báo cáo
 
