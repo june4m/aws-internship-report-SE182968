@@ -1,83 +1,213 @@
 ---
-title: "Test the Gateway Endpoint"
+title: "Create Amazon RDS"
 date: "2025-09-08"
 weight: 2
 chapter: false
-pre: " <b> 5.3.2 </b> "
+pre: " <b> 5.3.2. </b> "
 ---
 
-#### Create S3 bucket
+#### Step 1: Create RDS MySQL Instance
 
-1. Navigate to **S3 management console**
-2. In the Bucket console, choose **Create bucket**
+1. Go to **RDS Console** → **Databases** → **Create database**
 
-![Create bucket](/images/5-Workshop/5.3-S3-vpc/create-bucket.png)
+2. Choose database creation method:
+   - **Standard create**
 
-3. In **the Create bucket console**
+3. Engine options:
+   - **Engine type**: MySQL
+   - **Engine version**: MySQL 8.0.35 (or latest 8.0.x)
 
-- **Name the bucket**: choose a name that hasn't been given to any bucket globally (hint: lab number and your name)
+4. Templates:
+   - **Free tier** (for workshop/testing)
 
-![Bucket name](/images/5-Workshop/5.3-S3-vpc/bucket-name.png)
+5. Settings:
+   - **DB instance identifier**: `daivietblood-db`
+   - **Master username**: `admin`
+   - **Credentials management**: Self managed
+   - **Master password**: `YourSecurePassword123!`
+   - **Confirm password**: `YourSecurePassword123!`
 
-- Leave other fields as they are (default)
-- Scroll down and choose **Create bucket**
+{{% notice warning %}}
+⚠️ **Important:** Save your password securely. You will need it to connect from Lambda.
+{{% /notice %}}
 
-![Create](/images/5-Workshop/5.3-S3-vpc/create-button.png)
+---
 
-- Successfully create S3 bucket.
+#### Step 2: Instance Configuration
 
-![Success](/images/5-Workshop/5.3-S3-vpc/bucket-success.png)
+1. Instance configuration:
+   - **DB instance class**: db.t3.micro (Free tier eligible)
+   - **Storage type**: General Purpose SSD (gp2)
+   - **Allocated storage**: 20 GiB
+   - **Storage autoscaling**: Disable (for cost control)
 
-#### Connect to EC2 with session manager
+---
 
-- For this workshop, you will use **AWS Session Manager** to access several **EC2 instances**. **Session Manager** is a fully managed **AWS Systems Manager** capability that allows you to manage your **Amazon EC2 instances** and on-premises virtual machines (VMs) through an interactive one-click browser-based shell. Session Manager provides secure and auditable instance management without the need to open inbound ports, maintain bastion hosts, or manage SSH keys.
+#### Step 3: Connectivity
 
-- First cloud journey [Lab](https://000058.awsstudygroup.com/1-introduce/) for indepth understanding of Session manager.
+1. Connectivity:
+   - **Compute resource**: Don't connect to an EC2 compute resource
+   - **Network type**: IPv4
+   - **Virtual private cloud (VPC)**: `daivietblood-vpc`
+   - **DB subnet group**: `daivietblood-db-subnet-group`
+   - **Public access**: **No** ⚠️ Important!
+   - **VPC security group**: Choose existing
+   - **Existing VPC security groups**: `daivietblood-rds-sg`
+   - **Availability Zone**: ap-southeast-1a
 
-1. In the **AWS Management Console**, start typing `Systems Manager` in the quick search box and press **Enter**:
+2. Database port:
+   - **Database port**: 3306
 
-![system manager](/images/5-Workshop/5.3-S3-vpc/sm.png)
+---
 
-2. From the **Systems Manager** menu, find **Node Management** in the left menu and click **Session Manager**:
+#### Step 4: Database Authentication
 
-![system manager](/images/5-Workshop/5.3-S3-vpc/sm1.png)
+1. Database authentication:
+   - **Password authentication**
 
-3. Click **Start Session**, and select **the EC2 instance** named **Test-Gateway-Endpoint**.
-   {{% notice info %}}
-   This EC2 instance is already running in "VPC Cloud" and will be used to test connectivity to Amazon S3 through the Gateway endpoint you just created (s3-gwe). {{% /notice %}}
+---
 
-![Start session](/images/5-Workshop/5.3-S3-vpc/start-session.png)
+#### Step 5: Additional Configuration
 
-**Session Manager** will open a new browser tab with a shell prompt: sh-4.2 $
+1. Database options:
+   - **Initial database name**: `daivietblood`
+   - **DB parameter group**: default.mysql8.0
+   - **Option group**: default:mysql-8-0
 
-![Success](/images/5-Workshop/5.3-S3-vpc/start-session-success.png)
+2. Backup:
+   - **Enable automated backups**: Yes
+   - **Backup retention period**: 7 days
+   - **Backup window**: No preference
 
-You have successfully start a session - connect to the EC2 instance in VPC cloud. In the next step, we will create a S3 bucket and a file in it.
+3. Encryption:
+   - **Enable encryption**: Yes (default)
 
-#### Create a file and upload to s3 bucket
+4. Monitoring:
+   - **Enable Enhanced monitoring**: No (to reduce cost)
 
-1. Change to the ssm-user's home directory by typing `cd ~` in the CLI
+5. Maintenance:
+   - **Enable auto minor version upgrade**: Yes
+   - **Maintenance window**: No preference
 
-![Change user's dir](/images/5-Workshop/5.3-S3-vpc/cli1.png)
+6. Deletion protection:
+   - **Enable deletion protection**: No (for workshop)
 
-2. Create a new file to use for testing with the command `fallocate -l 1G testfile.xyz`, which will create a file of 1GB size named "testfile.xyz".
+7. Click **Create database**
 
-![Create file](/images/5-Workshop/5.3-S3-vpc/cli-file.png)
+{{% notice info %}}
+ℹ️ RDS creation takes 10-15 minutes. Wait until status shows "Available".
+{{% /notice %}}
 
-3. Upload file to S3 bucket with command `aws s3 cp testfile.xyz s3://your-bucket-name`. Replace your-bucket-name with the name of S3 bucket that you created earlier.
+---
 
-![Uploaded](/images/5-Workshop/5.3-S3-vpc/uploaded.png)
+#### Step 6: Get RDS Endpoint
 
-You have successfully uploaded the file to your S3 bucket. You can now terminate the session.
+After RDS is available:
 
-#### Check object in S3 bucket
+1. Go to **RDS Console** → **Databases** → Click `daivietblood-db`
 
-1. Navigate to S3 console.
-2. Click the name of your s3 bucket
-3. In the Bucket console, you will see the file you have uploaded to your S3 bucket
+2. In **Connectivity & security** tab, copy:
+   - **Endpoint**: `daivietblood-db.xxxxxxxxxxxx.ap-southeast-1.rds.amazonaws.com`
+   - **Port**: `3306`
 
-![Check S3](/images/5-Workshop/5.3-S3-vpc/check-s3-bucket.png)
+3. Save these values for Lambda configuration:
+```
+DB_HOST=daivietblood-db.xxxxxxxxxxxx.ap-southeast-1.rds.amazonaws.com
+DB_PORT=3306
+DB_NAME=daivietblood
+DB_USER=admin
+DB_PASSWORD=YourSecurePassword123!
+```
 
-#### Section summary
+---
 
-Congratulation on completing access to S3 from VPC. In this section, you created a Gateway endpoint for Amazon S3, and used the AWS CLI to upload an object. The upload worked because the Gateway endpoint allowed communication to S3, without needing an Internet Gateway attached to "VPC Cloud". This demonstrates the functionality of the Gateway endpoint as a secure path to S3 without traversing the Public Internet.
+#### Step 7: Create Database Schema
+
+Since RDS is in Private Subnet, you need to connect via a bastion host or use Lambda to initialize the schema.
+
+**Option A: Using Lambda to Initialize (Recommended)**
+
+Create a one-time Lambda function to initialize the database:
+
+```javascript
+// init-db.js
+const mysql = require('mysql2/promise');
+
+exports.handler = async (event) => {
+  const connection = await mysql.createConnection({
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME
+  });
+
+  // Create tables
+  const createUsersTable = `
+    CREATE TABLE IF NOT EXISTS users (
+      id INT AUTO_INCREMENT PRIMARY KEY,
+      email VARCHAR(255) UNIQUE NOT NULL,
+      name VARCHAR(255) NOT NULL,
+      blood_type ENUM('A+', 'A-', 'B+', 'B-', 'AB+', 'AB-', 'O+', 'O-') NOT NULL,
+      phone VARCHAR(20),
+      created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    )
+  `;
+
+  const createDonationsTable = `
+    CREATE TABLE IF NOT EXISTS donations (
+      id INT AUTO_INCREMENT PRIMARY KEY,
+      user_id INT NOT NULL,
+      donation_date DATE NOT NULL,
+      location VARCHAR(255),
+      status ENUM('scheduled', 'completed', 'cancelled') DEFAULT 'scheduled',
+      created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+      FOREIGN KEY (user_id) REFERENCES users(id)
+    )
+  `;
+
+  const createEmergencyRequestsTable = `
+    CREATE TABLE IF NOT EXISTS emergency_requests (
+      id INT AUTO_INCREMENT PRIMARY KEY,
+      requester_name VARCHAR(255) NOT NULL,
+      blood_type ENUM('A+', 'A-', 'B+', 'B-', 'AB+', 'AB-', 'O+', 'O-') NOT NULL,
+      units_needed INT NOT NULL,
+      hospital VARCHAR(255) NOT NULL,
+      urgency ENUM('critical', 'urgent', 'normal') DEFAULT 'normal',
+      status ENUM('open', 'fulfilled', 'cancelled') DEFAULT 'open',
+      created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    )
+  `;
+
+  await connection.execute(createUsersTable);
+  await connection.execute(createDonationsTable);
+  await connection.execute(createEmergencyRequestsTable);
+
+  await connection.end();
+
+  return {
+    statusCode: 200,
+    body: JSON.stringify({ message: 'Database initialized successfully' })
+  };
+};
+```
+
+---
+
+#### Verification Checklist
+
+- [ ] RDS instance created and status is "Available"
+- [ ] RDS is in Private Subnet (Public access: No)
+- [ ] RDS Security Group only allows access from Lambda SG
+- [ ] Endpoint and credentials saved securely
+- [ ] Initial database `daivietblood` created
+- [ ] Database schema initialized (tables created)
+
+---
+
+#### Troubleshooting
+
+| Issue | Solution |
+|:------|:---------|
+| Cannot connect to RDS | Verify Security Group allows inbound from Lambda SG |
+| RDS creation failed | Check Service Quotas for RDS instances |
+| Connection timeout | Ensure Lambda is in same VPC and has NAT Gateway access |
