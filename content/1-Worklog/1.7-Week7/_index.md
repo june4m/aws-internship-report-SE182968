@@ -6,10 +6,6 @@ chapter: false
 pre: " <b> 1.7. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
-
 ### Week 7 Goals:
 
 - Systematize all knowledge acquired in the first half of the program.

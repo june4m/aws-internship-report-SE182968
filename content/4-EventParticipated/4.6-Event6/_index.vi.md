@@ -6,10 +6,6 @@ chapter: false
 pre: " <b> 4.6. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 # Báo cáo Tổng kết Sự kiện: AWS Cloud Mastery Series #3
 
 **Chủ đề:** AWS Well-Architected – Security Pillar Workshop (Workshop chuyên sâu về Trụ cột Bảo mật)

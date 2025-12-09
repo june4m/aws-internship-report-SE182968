@@ -6,10 +6,6 @@ chapter: false
 pre: " <b> 1.3. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Thông tin dưới đây chỉ mang tính chất tham khảo. Vui lòng **không sao chép nguyên văn** vào báo cáo của bạn, bao gồm cả cảnh báo này.
-{{% /notice %}}
-
 ### Mục tiêu Tuần 3:
 
 - **Làm chủ nền tảng điện toán (Compute):** Tìm hiểu sâu về kiến trúc Amazon EC2, hiểu rõ các trường hợp sử dụng riêng biệt cho từng loại Instance (Instance Types).

@@ -6,10 +6,6 @@ chapter: false
 pre: " <b> 3.2. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 # Tinh gọn vận hành SAP với CloudWatch MCP Server và Amazon Q CLI – Phần 4
 
 bởi Ferry Mulyadi và Vijay Sitaram | 12 THÁNG 8 2025 | in [Amazon CloudWatch](https://aws.amazon.com/vi/blogs/awsforsap/category/management-tools/amazon-cloudwatch/), [Amazon Q](https://aws.amazon.com/vi/blogs/awsforsap/category/amazon-q/), [AWS Systems Manager](https://aws.amazon.com/vi/blogs/awsforsap/category/management-tools/aws-systems-manager/), [AWS Well-Architected](https://aws.amazon.com/vi/blogs/awsforsap/category/aws-well-architected/), [How-To](https://aws.amazon.com/vi/blogs/awsforsap/category/how-to/), [SAP on AWS](https://aws.amazon.com/vi/blogs/awsforsap/category/sap/), [Technical How-to](https://aws.amazon.com/vi/blogs/awsforsap/category/post-types/technical-how-to/), [Thought Leadership](https://aws.amazon.com/vi/blogs/awsforsap/category/post-types/thought-leadership/) | [Permalink](https://aws.amazon.com/vi/blogs/awsforsap/streamline-sap-operation-with-cloudwatch-mcp-server-and-amazon-q-cli-part-4/) | [Share](https://aws.amazon.com/vi/blogs/awsforsap/streamline-sap-operation-with-cloudwatch-mcp-server-and-amazon-q-cli-part-4/#)

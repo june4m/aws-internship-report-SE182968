@@ -6,10 +6,6 @@ chapter: false
 pre: " <b> 6. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 Trong suốt thời gian thực tập tại **Công ty TNHH Amazon Web Services Vietnam** từ **08/09/2025** đến **28/12/2025**, tôi đã có cơ hội học hỏi, rèn luyện và áp dụng kiến thức đã được trang bị tại trường vào môi trường làm việc thực tế.  
 Tôi đã tham gia 8 buổi lên văn phòng và 6 buổi sự kiện, cá nhân tôi thấy số buổi tham gia các hoạt động vẫn còn tương đối ít nhưng qua các buổi tham gia này, tôi đã có cơ hội nói chuyện và làm quen với các bạn mới và học hỏi được thêm nhiều điều từ họ. Ngoài ra, các buổi lên văn phòng giúp em làm quen được các anh/ chị mentor. Em đã có một vài cuộc đối thoại với các anh/ chị nhưng trong đó thân quen nhất có lẽ là anh Thịnh và anh Hoàng Anh - 2 người em hay nhắn tin nhât.
 Qua các buổi tham gia, tôi nhận thấy dần dần đang có sự thay đổi trong tư duy, không còn là của một sinh viên nữa mà đang dần phải trưởng thành và thích nghi dần với các yêu cầu văn hóa doanh nghiệp. Tôi nghĩ điều này là quý giá và cần thiết để chuẩn bị tinh thần cho sự nghiệp tương lai không xa.
@@ -35,7 +31,7 @@ Về tác phong, tôi luôn cố gắng hoàn thành tốt nhiệm vụ, tuân t
 
 ### Cần cải thiện
 
-- Enhanced team communication and task reporting skills to ensure workflow efficiency and prevent delays.
-- Cultivated a more disciplined and rigorous approach to self-study.
-- Refined critical thinking and problem-solving mindset.
-- Improved communication skills in both daily interactions and professional settings, as well as situational handling capabilities.
+- Nâng cao kỹ năng giao tiếp nhóm và báo cáo công việc để đảm bảo hiệu quả quy trình làm việc và tránh chậm trễ.
+- Rèn luyện thái độ tự học có kỷ luật và nghiêm túc hơn.
+- Trau dồi tư duy phản biện và khả năng giải quyết vấn đề.
+- Cải thiện kỹ năng giao tiếp trong cả tương tác hàng ngày lẫn môi trường chuyên nghiệp, cũng như khả năng xử lý tình huống.

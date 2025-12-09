@@ -6,10 +6,6 @@ chapter: false
 pre: " <b> 1.4. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Thông tin dưới đây chỉ mang tính chất tham khảo. Vui lòng **không sao chép nguyên văn** vào báo cáo của bạn, bao gồm cả cảnh báo này.
-{{% /notice %}}
-
 ### Mục tiêu Tuần 4:
 
 - **Lưu trữ & Phân phối nội dung:** Hiểu và thực hành triển khai hosting website tĩnh sử dụng Amazon S3 kết hợp với mạng phân phối nội dung CloudFront.

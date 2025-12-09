@@ -6,10 +6,6 @@ chapter: false
 pre: " <b> 3.2. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only, please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
-
 # Streamlining SAP Operations with CloudWatch MCP Server and Amazon Q CLI – Part 4
 
 by Ferry Mulyadi and Vijay Sitaram | AUGUST 12, 2025 | in [Amazon CloudWatch](https://aws.amazon.com/blogs/awsforsap/category/management-tools/amazon-cloudwatch/), [Amazon Q](https://aws.amazon.com/blogs/awsforsap/category/amazon-q/), [AWS Systems Manager](https://aws.amazon.com/blogs/awsforsap/category/management-tools/aws-systems-manager/), [AWS Well-Architected](https://aws.amazon.com/blogs/awsforsap/category/aws-well-architected/), [How-To](https://aws.amazon.com/blogs/awsforsap/category/how-to/), [SAP on AWS](https://aws.amazon.com/blogs/awsforsap/category/sap/), [Technical How-to](https://aws.amazon.com/blogs/awsforsap/category/post-types/technical-how-to/), [Thought Leadership](https://aws.amazon.com/blogs/awsforsap/category/post-types/thought-leadership/) | [Permalink](https://aws.amazon.com/blogs/awsforsap/streamline-sap-operation-with-cloudwatch-mcp-server-and-amazon-q-cli-part-4/) | [Share](https://aws.amazon.com/blogs/awsforsap/streamline-sap-operation-with-cloudwatch-mcp-server-and-amazon-q-cli-part-4/#)

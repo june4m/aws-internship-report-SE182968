@@ -6,10 +6,6 @@ chapter: false
 pre: " <b> 4.5. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 # Báo Cáo Tổng Kết: Tham dự AWS Cloud Mastery Series #2 – DevOps on AWS
 
 ### Mục tiêu tham dự

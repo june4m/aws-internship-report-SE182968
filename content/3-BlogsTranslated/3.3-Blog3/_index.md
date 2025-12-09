@@ -6,10 +6,6 @@ chapter: false
 pre: " <b> 3.2. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
-
 # Deploy Okta as a Custom Identity Provider for AWS Transfer Family
 
 **By:** Yongki Kim and Tamelly Lim

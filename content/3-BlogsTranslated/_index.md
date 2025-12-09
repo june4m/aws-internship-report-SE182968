@@ -6,32 +6,28 @@ chapter: false
 pre: " <b> 3. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
+Below is a list of blogs that have been translated into Vietnamese:
 
-This section will list and introduce the blogs you have translated. For example:
+### [Blog 1 - Optimizing SAP Operations with CloudWatch MCP server and Amazon Q CLI – Part 3](3.1-Blog1/)
 
-### [Blog 1 - Getting started with healthcare data lakes: Using microservices](3.1-Blog1/)
+This blog introduces how to combine Amazon CloudWatch MCP Server and Amazon Q CLI to optimize SAP operations. The article demonstrates using natural language to create SAP HANA system health reports, manage ASCS/ERS clusters, and simplify routine maintenance tasks. The solution aligns with the AWS Well-Architected Framework for SAP.
 
-This blog introduces how to start building a data lake in the healthcare sector by applying a microservices architecture. You will learn why data lakes are important for storing and analyzing diverse healthcare data (electronic medical records, lab test data, medical IoT devices…), how microservices help make the system more flexible, scalable, and easier to maintain. The article also guides you through the steps to set up the environment, organize the data processing pipeline, and ensure compliance with security & privacy standards such as HIPAA.
+### [Blog 2 - Streamlining SAP Operations with CloudWatch MCP Server and Amazon Q CLI – Part 4](3.2-Blog2/)
 
-### [Blog 2 - ...](3.2-Blog2/)
+This blog continues from Part 3, illustrating advanced applications of CloudWatch MCP Server and Q CLI in SAP operations. The article guides you through orchestrating planned maintenance events, accelerating root cause analysis, and reducing Mean Time To Resolution (MTTR) for SAP systems.
 
-This blog introduces how to start building a data lake in the healthcare sector by applying a microservices architecture. You will learn why data lakes are important for storing and analyzing diverse healthcare data (electronic medical records, lab test data, medical IoT devices…), how microservices help make the system more flexible, scalable, and easier to maintain. The article also guides you through the steps to set up the environment, organize the data processing pipeline, and ensure compliance with security & privacy standards such as HIPAA.
+### [Blog 3 - Deploy Okta as a Custom Identity Provider for AWS Transfer Family](3.3-Blog3/)
 
-### [Blog 3 - ...](3.3-Blog3/)
+This blog guides you through deploying Okta as a custom Identity Provider for AWS Transfer Family. The article demonstrates setting up MFA authentication with TOTP, configuring DynamoDB for user management, and testing SFTP connections with Okta authentication.
 
-This blog introduces how to start building a data lake in the healthcare sector by applying a microservices architecture. You will learn why data lakes are important for storing and analyzing diverse healthcare data (electronic medical records, lab test data, medical IoT devices…), how microservices help make the system more flexible, scalable, and easier to maintain. The article also guides you through the steps to set up the environment, organize the data processing pipeline, and ensure compliance with security & privacy standards such as HIPAA.
+### [Blog 4 - Getting Started with Healthcare Data Lakes: Using Microservices](3.4-Blog4/)
 
-### [Blog 4 - ...](3.4-Blog4/)
+This blog introduces how to build a healthcare data lake using microservices architecture. The article covers pub/sub hub design, core microservice, front door microservice with Amazon Cognito, and staging ER7 microservice for processing HL7v2 data.
 
-This blog introduces how to start building a data lake in the healthcare sector by applying a microservices architecture. You will learn why data lakes are important for storing and analyzing diverse healthcare data (electronic medical records, lab test data, medical IoT devices…), how microservices help make the system more flexible, scalable, and easier to maintain. The article also guides you through the steps to set up the environment, organize the data processing pipeline, and ensure compliance with security & privacy standards such as HIPAA.
+### [Blog 5 - Getting Started with Healthcare Data Lakes: Using Microservices](3.5-Blog5/)
 
-### [Blog 5 - ...](3.5-Blog5/)
+This blog introduces how to build a healthcare data lake using microservices architecture. The article covers pub/sub hub design, core microservice, front door microservice with Amazon Cognito, and staging ER7 microservice for processing HL7v2 data.
 
-This blog introduces how to start building a data lake in the healthcare sector by applying a microservices architecture. You will learn why data lakes are important for storing and analyzing diverse healthcare data (electronic medical records, lab test data, medical IoT devices…), how microservices help make the system more flexible, scalable, and easier to maintain. The article also guides you through the steps to set up the environment, organize the data processing pipeline, and ensure compliance with security & privacy standards such as HIPAA.
+### [Blog 6 - Getting Started with Healthcare Data Lakes: Using Microservices](3.6-Blog6/)
 
-### [Blog 6 - ...](3.6-Blog6/)
-
-This blog introduces how to start building a data lake in the healthcare sector by applying a microservices architecture. You will learn why data lakes are important for storing and analyzing diverse healthcare data (electronic medical records, lab test data, medical IoT devices…), how microservices help make the system more flexible, scalable, and easier to maintain. The article also guides you through the steps to set up the environment, organize the data processing pipeline, and ensure compliance with security & privacy standards such as HIPAA.
+This blog introduces how to build a healthcare data lake using microservices architecture. The article covers pub/sub hub design, core microservice, front door microservice with Amazon Cognito, and staging ER7 microservice for processing HL7v2 data.

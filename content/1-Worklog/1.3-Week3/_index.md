@@ -6,10 +6,6 @@ chapter: false
 pre: " <b> 1.3. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
-
 ### Week 3 Goals:
 
 - **Mastering Compute Fundamentals:** Deep dive into Amazon EC2 architecture, understanding the distinct use cases for different Instance Types.
