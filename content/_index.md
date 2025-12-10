@@ -13,7 +13,7 @@ chapter: false
 
 &emsp; **Phone Number:** 0363401520
 
-&emsp; **Email:** congminh04062004@gmail.com
+&emsp; **Email:** congminh04062004@gmail.com | minhncse182968@fpt.edu.vn
 
 &emsp; **University:** FPT University HCM
 

@@ -6,6 +6,8 @@ chapter: false
 pre: " <b> 1.7. </b> "
 ---
 
+
+
 ### Mục tiêu tuần 7:
 
 - Hệ thống hóa toàn bộ kiến thức đã học ở nửa đầu chương trình.

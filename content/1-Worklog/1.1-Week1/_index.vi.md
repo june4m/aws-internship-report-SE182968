@@ -6,6 +6,8 @@ chapter: false
 pre: " <b> 1.1. </b> "
 ---
 
+
+
 ### Mục tiêu tuần 1:
 
 - Cài đặt môi trường.

@@ -1,55 +1,41 @@
 ---
 title: "Worklog Tuần 12"
-date: "2025-09-08"
+date: "2025-11-24"
 weight: 12
 chapter: false
-pre: " <b> 1.12 </b> "
+pre: " <b> 1.12. </b> "
 ---
 
-### Mục tiêu tuần 12:
+### Mục tiêu Tuần 12:
 
-- Kết nối, làm quen với các thành viên trong First Cloud Journey.
-- Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+- **Bảo mật & Giám sát:** Rà soát lỗ hổng bảo mật và thiết lập Dashboard theo dõi hệ thống.
+- **Tổng kết dự án:** Hoàn thiện tài liệu, tối ưu hóa lần cuối và chuẩn bị slide báo cáo.
 
-### Các công việc cần triển khai trong tuần này:
+### Các nhiệm vụ thực hiện trong tuần này:
 
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP <br>                    | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Ngày    | Nhiệm vụ                                                                                                                                                                                                      | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| :------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :----------- | :-------------- | :----------------- |
+| **2-3** | - Cấu hình CloudWatch Alarms và Dashboard.<br>- Rà soát bảo mật với AWS Trusted Advisor và GuardDuty.                                                                                                         | 24/11/2025   | 25/11/2025      |                    |
+| **4-5** | **Tối ưu hóa & Đóng gói:**<br>- Review và xóa các tài nguyên thừa để tối ưu chi phí.<br>- Viết tài liệu hướng dẫn vận hành (Runbook).<br>- Soạn thảo slide báo cáo tổng kết (Kiến trúc, Thách thức, Bài học). | 26/11/2025   | 27/11/2025      |                    |
 
-### Kết quả đạt được tuần 12:
+---
 
-- Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản:
+### Thành tựu Tuần 12: Hệ thống Hoàn thiện & Sẵn sàng Bàn giao
 
-  - Compute
-  - Storage
-  - Networking
-  - Database
-  - ...
+#### 1. Đánh giá Hiệu năng & Tinh chỉnh
 
-- Đã tạo và cấu hình AWS Free Tier account thành công.
+- **Giám sát:**
+  - Đã thiết lập **CloudWatch Dashboard** hiển thị trực quan các chỉ số: CPU Utilization, Request Count, Database Connections, Error Rate (4xx, 5xx).
+  - Cấu hình **SNS Alerts** để gửi email cảnh báo cho Admin khi hệ thống gặp sự cố.
 
-- Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+#### 2. Tối ưu hóa & Bảo mật nâng cao
 
-- Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
+- **Bảo mật:**
+  - Đã kích hoạt **WAF (Web Application Firewall)** để chặn các tấn công phổ biến (SQL Injection, XSS).
+  - Review IAM Roles và thu hồi các quyền hạn không cần thiết.
+- **Chi phí:** Dựa trên dữ liệu chạy thử 2 tuần, đã điều chỉnh lại loại Instance từ t3.medium xuống t3.micro cho môi trường Dev để tiết kiệm chi phí mà không ảnh hưởng hiệu năng.
 
-  - Access Key
-  - Secret Key
-  - Region mặc định
-  - ...
+#### 3. Hoàn tất Dự án
 
-- Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  - Kiểm tra thông tin tài khoản & cấu hình
-  - Lấy danh sách region
-  - Xem dịch vụ EC2
-  - Tạo và quản lý key pair
-  - Kiểm tra thông tin dịch vụ đang chạy
-  - ...
-
-- Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-- ...
+- **Tài liệu hóa:** Hoàn thành bộ tài liệu dự án bao gồm: Sơ đồ kiến trúc cập nhật, hướng dẫn triển khai lại và báo cáo chi phí.
+- **Bài học kinh nghiệm:** Đúc kết được kinh nghiệm về việc xử lý "Cold Start" khi Auto Scaling và tầm quan trọng của việc cấu hình Health Check chính xác

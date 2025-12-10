@@ -1,55 +1,38 @@
 ---
 title: "Worklog Tuần 10"
-date: "2025-09-08"
+date: "2025-11-10"
 weight: 10
 chapter: false
 pre: " <b> 1.10. </b> "
 ---
 
-### Mục tiêu tuần 10:
+### Mục tiêu Tuần 10:
 
-- Kết nối, làm quen với các thành viên trong First Cloud Journey.
-- Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+- **Thiết kế giải pháp (Solution Architecture):** Hoàn thiện bản vẽ kiến trúc High-Level (HLD) và Low-Level (LLD) dựa trên AWS Well-Architected Framework.
+- **Quy hoạch tài nguyên & Chi phí:** Ước tính chi phí vận hành (TCO) và lựa chọn dịch vụ phù hợp.
+- **Khởi tạo hạ tầng mạng (Networking):** Thiết lập nền móng VPC, Subnet và các chính sách bảo mật cơ bản.
 
-### Các công việc cần triển khai trong tuần này:
+### Các nhiệm vụ thực hiện trong tuần này:
 
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP <br>                    | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Ngày    | Nhiệm vụ                                                                                                                                                                                                                                                         | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| :------ | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------- | :-------------- | :----------------- |
+| **2-3** | **Thiết kế & Quy hoạch:**<br>- Phân tích yêu cầu nghiệp vụ dự án.<br>- Vẽ sơ đồ kiến trúc hệ thống (Architecture Diagram).<br>- Sử dụng AWS Pricing Calculator để lập bảng dự toán chi phí.<br>- Review kiến trúc theo 5 trụ cột của Well-Architected Framework. | 10/11/2025   | 11/11/2025      |                    |
+| **4-5** | **Triển khai Hạ tầng mạng (IaC):**<br>- Viết code (Terraform/CloudFormation) để khởi tạo VPC, Public/Private Subnets, NAT Gateway, Route Tables.<br>- Thiết kế và cấu hình các Security Group cơ bản cho Bastion Host, Web Server và Database.                   | 12/11/2025   | 13/11/2025      |                    |
 
-### Kết quả đạt được tuần 10:
+---
 
-- Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản:
+### Thành tựu Tuần 10: Bản vẽ Kiến trúc & Nền móng Hạ tầng
 
-  - Compute
-  - Storage
-  - Networking
-  - Database
-  - ...
+#### 1. Thiết kế Kiến trúc Hệ thống
 
-- Đã tạo và cấu hình AWS Free Tier account thành công.
+- **Sơ đồ kiến trúc:** Hoàn thành sơ đồ luồng dữ liệu và bố trí tài nguyên. Hệ thống được thiết kế theo mô hình **Single-AZ**.
+- **Lựa chọn dịch vụ:**
+  - **Database:** RDS MySQL (Multi-AZ) cho dữ liệu quan hệ.
+  - **Storage:** S3 cho static assets và backup.
+- **Tối ưu chi phí:** Đã lập bảng dự toán ngân sách hàng tháng và xác định các phương án tiết kiệm (như sử dụng Spot Instances cho môi trường Dev, Savings Plans cho Prod).
 
-- Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+#### 2. Triển khai Mạng lưới (VPC)
 
-- Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-
-  - Access Key
-  - Secret Key
-  - Region mặc định
-  - ...
-
-- Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  - Kiểm tra thông tin tài khoản & cấu hình
-  - Lấy danh sách region
-  - Xem dịch vụ EC2
-  - Tạo và quản lý key pair
-  - Kiểm tra thông tin dịch vụ đang chạy
-  - ...
-
-- Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-- ...
+- **Cấu trúc mạng:** Thiết lập thành công VPC với dải CIDR tùy chỉnh, chia tách rõ ràng giữa Public Subnet và Private Subnet (cho App, DB).
+- **Bảo mật mạng:**
+  - Thiết lập **Security Groups** theo nguyên tắc đặc quyền tối thiểu (Least Privilege).

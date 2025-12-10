@@ -6,6 +6,8 @@ chapter: false
 pre: " <b> 1.4. </b> "
 ---
 
+
+
 ### Week 4 Goals:
 
 - **Storage & Content Delivery:** Understand and practice deploying static website hosting using Amazon S3 combined with the CloudFront content delivery network.

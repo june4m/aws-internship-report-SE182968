@@ -1,55 +1,34 @@
 ---
 title: "Worklog Tuần 11"
-date: "2025-09-08"
+date: "2025-11-17"
 weight: 11
 chapter: false
 pre: " <b> 1.11. </b> "
 ---
 
-### Mục tiêu tuần 11:
+### Mục tiêu Tuần 11:
 
-- Kết nối, làm quen với các thành viên trong First Cloud Journey.
-- Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+- **Triển khai Core Services:** Cấu hình Compute, Database.
+- **Tự động hóa (DevOps):** Xây dựng quy trình CI/CD để tự động hóa việc build và deploy code lên môi trường AWS.
 
-### Các công việc cần triển khai trong tuần này:
+### Các nhiệm vụ thực hiện trong tuần này:
 
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP <br>                    | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Ngày    | Nhiệm vụ                                                                                                                                                                                                                                                    | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| :------ | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------- | :-------------- | :----------------- |
+| **2-3** | **Cấu hình Compute & DB:**<br>- Khởi tạo RDS với Single-AZ.<br>- Kết nối MySQL                                                                                                                                                                              | 17/11/2025   | 18/11/2025      |                    |
+| **4-5** | **Xây dựng CI/CD Pipeline:**<br>- Thiết lập Repo trên CodeCommit/GitHub.<br>- Cấu hình CodeBuild để đóng gói ứng dụng.<br>- Sử dụng CodeDeploy/CodePipeline để đẩy code tự động xuống EC2 Instance.<br>- Kiểm tra luồng triển khai code từ Local lên Cloud. | 19/11/2025   | 20/11/2025      |                    |
 
-### Kết quả đạt được tuần 11:
+---
 
-- Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản:
+### Thành tựu Tuần 11: Hệ thống Hoạt động & Pipeline Tự động
 
-  - Compute
-  - Storage
-  - Networking
-  - Database
-  - ...
+#### 1. Triển khai Ứng dụng Khả dụng cao
 
-- Đã tạo và cấu hình AWS Free Tier account thành công.
+- **Database:** RDS đã hoạt động ổn định ở chế độ Multi-AZ, đảm bảo dữ liệu an toàn khi có sự cố tại một AZ. Đã kết nối thành công App Server với DB.
 
-- Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+#### 2. Quy trình DevOps (CI/CD)
 
-- Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-
-  - Access Key
-  - Secret Key
-  - Region mặc định
-  - ...
-
-- Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  - Kiểm tra thông tin tài khoản & cấu hình
-  - Lấy danh sách region
-  - Xem dịch vụ EC2
-  - Tạo và quản lý key pair
-  - Kiểm tra thông tin dịch vụ đang chạy
-  - ...
-
-- Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-- ...
+- **Pipeline hoàn chỉnh:** Xây dựng thành công luồng CI/CD (Continuous Integration/Continuous Deployment).
+  - **Source:** Code được đẩy lên GitHub/CodeCommit.
+  - **Build:** Tự động cài đặt dependencies và đóng gói artifact.
+  - **Deploy:** Tự động cập nhật phiên bản mới lên toàn bộ EC2 instances trong ASG mà không gây gián đoạn dịch vụ (Zero Downtime Deployment - sử dụng chiến lược Rolling Update).

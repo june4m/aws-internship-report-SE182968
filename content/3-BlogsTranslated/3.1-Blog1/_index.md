@@ -6,230 +6,82 @@ chapter: false
 pre: " <b> 3.1. </b> "
 ---
 
-# Optimizing SAP Operations with CloudWatch MCP server and Amazon Q CLI – Part 3
+# Varsity Yearbooks Overcomes Market Challenges Through SaaS and CleanSlate
 
-_by Ferry Mulyadi and Vijay Sitaram | AUGUST 11, 2025 | in [Amazon CloudWatch](https://aws.amazon.com/blogs/awsforsap/category/management-tools/amazon-cloudwatch/), [Amazon Q](https://aws.amazon.com/blogs/awsforsap/category/amazon-q/), [Amazon Q Developer](https://aws.amazon.com/blogs/awsforsap/category/amazon-q/amazon-q-developer/), [SAP on AWS](https://aws.amazon.com/blogs/awsforsap/category/sap/), [Technical How-to](https://aws.amazon.com/blogs/awsforsap/category/post-types/technical-how-to/), [Thought Leadership](https://aws.amazon.com/blogs/awsforsap/category/post-types/thought-leadership/) | [Permalink](https://aws.amazon.com/blogs/awsforsap/streamline-sap-operation-with-cloudwatch-mcp-server-and-amazon-q-cli-part-3/) | [Share_](https://aws.amazon.com/vi/blogs/awsforsap/streamline-sap-operation-with-cloudwatch-mcp-server-and-amazon-q-cli-part-3/#)
+**Authors: Bill Tarr, Anthony McClure, Brad Laughlin, and Rowena Branch**
 
-## Introduction
+**Publication Date: March 13, 2025**
 
-In today's complex SAP environments, operational efficiency and rapid troubleshooting capabilities are key factors in ensuring business continuity. Following previous discussions on SAP observability ([Part 1](https://aws.amazon.com/blogs/awsforsap/improve-your-sap-business-process-resilience-with-amazon-cloudwatch-application-insights/)) and [Amazon CloudWatch Application Insights](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch-application-insights.html) features ([Part 2](https://aws.amazon.com/blogs/awsforsap/enhance-your-business-process-resilience-with-amazon-cloudwatch-application-insights-observability-for-sap-high-availability-part-2/)), this third article introduces a powerful combination of tools that is changing how teams manage SAP systems: **Amazon CloudWatch Model Context Protocol (MCP) Server** and **Amazon Q for command line (Q CLI)**.
+**Services:** Americas, AWS Well-Architected, AWS Well-Architected Framework, AWS Well-Architected Tool, Best Practices, Customer Solutions, DevOps, Education, Experience-Based Acceleration, Migration Solutions, SaaS
 
-This innovative solution addresses three major challenges in SAP operations:
+*by Brad Laughlin, VP of Strategy and Operations – CleanSlate Technology Group*  
+*By Rowena Branch, SaaS Partner Manager – AWS SaaS Factory*  
+*By Anthony McClure, Senior Partner Solutions Architect – AWS SaaS Factory*  
+*By Bill Tarr, Principal Solutions Architect – AWS SaaS Factory*
 
-- Complex command syntax slowing down operational progress
-- Time-consuming root cause analysis requiring multiple tools and contexts
-- The need for lean system health monitoring and reporting
+Software providers have evolved to survive. This has never been more true for education services during the 2020 pandemic. The changing needs of the institutions they serve pushed companies like [Varsity Yearbooks](https://www.herffjones.com/), a leading provider of graduation products since the 1920s, to focus on faster innovation and shorter time-to-market through a SaaS delivery model.
 
-In this blog, we will:
+In partnership with AWS SaaS Competency Partner [CleanSlate Technology Group](https://www.cleanslatetg.com/), Varsity Yearbooks carried out a strategic transformation of their products to adapt to the new online landscape, beginning with their yearbook line. This collaboration resulted in a SaaS transformation that reshaped Varsity Yearbooks’ approach by adopting a SaaS mindset to drive revenue and market share.
 
-- Explore how CloudWatch MCP Server and Q CLI collaborate to simplify SAP operations
-- Present real-world use cases for creating automated system health reports
-- Illustrate how natural language commands can optimize routine maintenance tasks
-- Demonstrate the alignment of this solution with the **AWS Well-Architected Framework for SAP**
+According to Varsity Yearbooks, they were simply trying to stay afloat before building a SaaS solution. CleanSlate helped them shift into a SaaS-oriented mindset, which ultimately increased revenue and market share. The result provided Varsity with a solution they felt completely confident in, enabling them to focus on the future and explore what comes next. Today, their team prioritizes delivering features to market within weeks instead of months and is achieving rapid market growth. The [SaaS solution](https://www.cleanslatetg.com/success_stories/herff-jones-story/) allowed Varsity Yearbooks to reimagine the yearbook production process and opened up possibilities for future markets. The team now constantly asks, “What else is possible?”
 
-[Part four](https://aws.amazon.com/blogs/awsforsap/streamline-sap-operation-with-cloudwatch-mcp-server-and-amazon-q-cli-part-4) of the series will focus on maintenance planning, advanced root cause analysis, and a detailed cost review when deploying this solution.
+CleanSlate’s work contributed to their recognition at the [TechPoint Digital Transformation Awards](https://techpoint.org/techpoint-announces-nominees-for-24th-annual-mira-awards-honoring-the-best-of-tech-in-indiana/) for successfully helping Varsity Yearbooks thrive in the $1.9 trillion education services industry.
 
-_Figure 1. Architecture diagram of Amazon CloudWatch MCP Server and Amazon Q for CLI_
+CleanSlate has extensive experience designing and building SaaS solutions for customers through a comprehensive approach to designing and developing modern applications. CleanSlate’s expertise includes product design, DevOps automation, cloud-native and mobile development. Their core values drive their success, with the ultimate goal of leaving customers in a better position than when they started. Their team of technologists is inspired to innovate and deliver. By collaborating with clients on modernization efforts, they help identify SaaS opportunities and guide organizations to think differently. Customers must ask how a modern application built using the SaaS model can bring greater value, such as becoming a growth driver, revenue engine, superior customer experience platform, or accelerating feature delivery. Thinking differently about modernization and transforming it into SaaS and a product strategy is what differentiates CleanSlate Technology Group from its competitors.
 
-## What is Amazon Q for CLI (Q CLI)?
+---
 
-Amazon Q CLI delivers transformative value to AWS customers by integrating an AI assistant directly into the command line workflow. It allows users to express commands in natural language, which Q then translates into standard CLI syntax, significantly shortening the learning curve. The tool provides contextual command suggestions based on user intent, eliminating time-consuming documentation searches. When errors occur, Q provides clear explanations and troubleshooting steps, accelerating the resolution process.
+# Solution Overview
 
-Q decomposes commands into easy-to-understand components, enhancing comprehension and skills. By keeping users within the terminal environment, Q optimizes workflows by eliminating interruptions caused by switching to external resources.
+CleanSlate’s collaboration with Varsity Yearbooks was driven by the imminent risk of failure of their electronic yearbook design software. The project focused on modernizing and transforming their 14-year-old platform and infrastructure into a modern SaaS solution, while re-platforming the legacy system to run in parallel until the new SaaS MVP (Minimum Viable Product) was released.
 
-This productivity improvement helps reduce time spent searching for syntax examples and troubleshooting, allowing developers to focus on building rather than wrestling with command structures. Q's interactivity accelerates learning, helping users master the AWS CLI faster. Ultimately, Amazon Q CLI transforms the command line experience from a potential barrier into an intuitive interface, making AWS services more accessible and efficient for customers of all expertise levels.
+By leveraging AWS services and the AWS SaaS Factory framework, we successfully modernized Varsity’s legacy software into a true SaaS product, as illustrated in Figure 1. CleanSlate’s modernization approach applied a SaaS product mindset, combining business planning with modern cloud-native application development. The multi-tenant solution designed and built by the team enabled business growth, competitive advantage, and enhanced customer flexibility and creativity.
 
-_Figure 2. Amazon Q CLI prompt interface_
+![][image1]  
+*Figure 1: Architecture model enabling SaaS delivery*
 
-## What is Amazon CloudWatch Model Context Protocol (MCP) Server?
+CleanSlate evaluated the overall solution from both a business and technology perspective.
 
-The Model Context Protocol (MCP) is an open-source standard that revolutionizes how development tools communicate with AI models. By providing structured context about code, files, and projects, MCP enables AI assistants to provide precisely tailored recommendations. A practical application is the **CloudWatch MCP Server**, which integrates metrics and logs from CloudWatch directly into the development environment. As a result, developers can monitor and troubleshoot without leaving their IDE (Integrated Development Environment), optimizing operational workflows.
+## Business Perspective
 
-The [AWS Labs CloudWatch MCP Server](https://github.com/awslabs/mcp/tree/main/src/cloudwatch-mcp-server) bridges the gap between AI troubleshooting agents and operational data. It enables AI-driven root cause analysis and recommendations, using CloudWatch remotely without needing custom API integrations.
+CleanSlate collaborated with Varsity Yearbooks to achieve their business goals, creating a marketable AWS SaaS solution. This process included building a product roadmap and go-to-market strategy, defining commercialization and packaging, establishing customer success metrics, using an MVP approach, and prioritizing modern UX/UI to improve usability and functionality.
 
-The Server features 4 specialized tools:
+## Technology Perspective
 
-- **Alarm Based Troubleshooting:** Identifies active alarms and analyzes historical patterns to find root causes, offering contextual remediation recommendations.
-- **Log Analyzer:** Inspects CloudWatch log groups for anomalies and errors over specific time intervals.
-- **Metric Definition Analyzer:** Provides descriptions of metrics, calculation methods, and recommended statistics.
-- **Alarm Recommendations:** Suggests optimal alarm configurations with appropriate thresholds and evaluation periods.
+CleanSlate developed the technical foundation in alignment with Varsity Yearbooks’ business vision, delivering a well-built and future-proof solution. This included profiling, analytics, identity/access management, tenant isolation/multi-tenant storage, SaaS-focused DevOps automation, microservice architecture design, partner integrations, and modernization using AWS, Angular, and Java.
 
-## What are the tools in CloudWatch MCP Server?
+CleanSlate built a scalable SaaS application using more than 20 AWS services, including a multi-tenant architecture with [AWS Identity and Access Management](https://aws.amazon.com/iam/) (IAM) and microservices for seamless tenant connectivity. [Amazon Elastic Container Service](https://aws.amazon.com/ecs/) (ECS) and [Amazon Relational Database Service](https://aws.amazon.com/rds/) (RDS) enabled automatic horizontal scaling, while auto-scaling rules handled demand spikes. Application profiling, analytics, and monitoring tools such as [AWS CloudTrail](https://aws.amazon.com/cloudtrail/), [New Relic](https://newrelic.com/), and [Splunk](https://www.splunk.com/) ensured governance and scalability.
 
-When a user enters a natural language prompt in Q CLI, a tool from the CloudWatch MCP Server is invoked to interact with AWS services to perform the task.
-You can start Q from the client by typing `q` and using `/tools` or `/mcp` to view the list of available tools and loaded MCP servers in the environment.
+The SaaS DevOps approach automated the entire infrastructure with [Hashicorp Terraform](https://developer.hashicorp.com/terraform), integrated quality checks, and continuous integration/deployment pipelines. This enabled Varsity Yearbooks to scale their development team, run multiple environments simultaneously, and accelerate production releases with on-demand deployment.
 
-_Figure 3. Q CLI Server tools loaded in the client session_
+Initial challenges included operational inefficiencies hindering innovation, slow time-to-market impacting customer satisfaction, limited scalability and reliability, long bug resolution cycles, lack of monitoring/logging tools, and manual onboarding processes. CleanSlate addressed these challenges through modernization and a new SaaS product mindset.
 
-_Figure 4. CloudWatch MCP server loaded in the client session_
+---
 
-## How does this solution align with the Well-Architected Framework for SAP Lens?
+# Lessons Learned
 
-- **Lean SAP Operations:** Q CLI improves SAP operational processes by allowing engineers to use natural language to execute AWS operations supporting SAP workloads. This aligns with the [SAP Lens](https://docs.aws.amazon.com/wellarchitected/latest/sap-lens/sap-lens.html) focus on automation and reducing manual effort in managing critical business systems, as CLI commands for SAP infrastructure can be generated through simple conversational requests.
-- **Accelerated SAP Troubleshooting:** This combination reduces the mean time to resolution (MTTR) for SAP scenarios by providing contextual monitoring data and AI-assisted analysis of SAP components, thereby supporting rapid recovery from errors affecting business operations.
-- **Integrated Observability for SAP:** The solution eliminates context switching by consolidating SAP-specific metrics, logs, and alarms directly into the client environment, supporting end-to-end monitoring across complex SAP systems. This integration helps teams observe SAP system behavior without workflow interruptions.
-- **SAP Change Impact Analysis:** The tool helps teams understand how changes affect SAP system stability by providing immediate feedback on operational metrics across the entire SAP technology stack.
-- **SAP Resilience Verification:** The tools simplify monitoring of SAP recovery mechanisms and fault isolation boundaries across distributed SAP systems, as well as testing the reliability of critical processes and transactions.
-- **Understanding SAP Architecture:** Q CLI can explain relationships between AWS services and SAP applications based on CloudWatch data, giving your team additional perspective on SAP architectural reliability.
-- **Democratizing SAP Knowledge:** The tool helps organizations "operate SAP as code." Q CLI's command-line explanation capabilities allow your team to operate efficiently on the SAP Landscape with sufficient information to make data-driven decisions.
+Overall, companies like CleanSlate must embody a passionate partnership mindset, demonstrating empathy toward customer challenges and working tirelessly to solve them with sustainable, long-term solutions. CleanSlate’s commitment to building a culture of service quality helps customers resolve both short-term and long-term challenges through improvements in processes, technology, and people. Partners must strive to understand the unique business needs of their customers, build trust, and collaborate to deliver the best solutions.
 
-## Prerequisites
+From a technology perspective, leveraging SaaS Factory frameworks and performing [AWS Well-Architected Reviews](https://aws.amazon.com/architecture/well-architected/) throughout the process truly helps companies succeed by building and deploying high-quality projects that take full advantage of the cloud. Investing in SaaS component design and strong SaaS DevOps principles enables sustainable and transformative SaaS product development.
 
-- Deployment of an **SAP S/4 HANA** system with High Availability using [AWS Launch Wizard for SAP](https://docs.aws.amazon.com/launchwizard/latest/userguide/launch-wizard-sap.html)
-- Enablement of full-stack observability for SAP via [Amazon CloudWatch Application Insights for SAP](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/appinsights-tutorial-sap-netweaver.html)
-- Installation of **Amazon Q CLI** following steps in [Installing Amazon Q for command line](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-installing.html)
-- Configuration of **CloudWatch MCP Server** on your machine following instructions in the [AWS Labs CloudWatch MCP repository](https://github.com/awslabs/mcp/tree/main/src/cloudwatch-mcp-server)
-- Configuration of **AWS CLI** on your machine following instructions in [configuration settings for the AWS CLI](https://docs.aws.amazon.com/cli/v1/userguide/cli-chap-configure.html)
+The biggest lesson from this large-scale digital transformation is that change is genuinely difficult to accept, and it requires the right partnership to embrace it. Varsity Yearbooks and CleanSlate encountered several challenges but ultimately built trust, integrated quality into their processes, advised effectively, adapted well, and worked tirelessly to meet expectations — all of which fueled success.
 
-Access to the solution is secured by [AWS Identity and Access Management (IAM)](https://aws.amazon.com/iam/); also review [Q CLI Security considerations and best practices](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-chat-security.html) as well as [Security best practices for Systems Manager](https://docs.aws.amazon.com/systems-manager/latest/userguide/security-best-practices.html). Apply the least-privilege access model for SAP Basis and AWS Infrastructure Engineers.
+---
 
-## Use-case 1: Create Health Reports for SAP
+# Conclusion
 
-This use case will create a health report for the SAP HANA database and the SAP Central Services (SAP ASCS) cluster. Q CLI generates contextual command-line commands to detect Amazon EC2 instances and build the health report. In this scenario, Q CLI runs multiple commands to check the status of SAP Central Services and generate a complete report:
+The successful transformation of Varsity Yearbooks demonstrates how traditional businesses can reinvent themselves through strategic SaaS adoption. Through collaboration with CleanSlate and AWS, what began as a pandemic-driven necessity evolved into a transformative business opportunity, enabling faster feature delivery, improved scalability, and greater operational efficiency. This shift positioned Varsity Yearbooks for long-term growth and continuous innovation.
 
-1.  Enter prompt to generate the cluster health report.
-2.  Run `aws ec2 describe-instances` for instances belonging to the cluster.
-3.  Run `ssm crm_mon` command to check the status of nodes in the cluster.
-4.  Run `ssm` command to check `pacemaker.log`.
-5.  Run `ssm` command to check `corosync.log`.
-6.  Run `ssm` command to check `corosync.log`.
+This success story highlights the value of [AWS SaaS Competency Partners](https://aws.amazon.com/partners/saas-on-aws/partner-solutions/), who bring deep expertise in designing and building cloud-native solutions on AWS. Just as CleanSlate has helped organizations ease the burden of legacy migrations and establish strong foundations for SaaS solutions on AWS, they also provide comprehensive architectural and deployment support for enterprises pursuing digital transformation.
 
-**Important Note:** The prompts and responses below have been abbreviated. You can download [Use-case 1 - Create Health Reports for SAP](https://d2908q01vomqb2.cloudfront.net/17ba0791499db908433b80f37c5fbc89b870084b/2025/07/16/Use-case-1-Create-Health-Reports-for-SAP.pdf) to view the full prompt and response from Q CLI.
+[![][image2]](https://partners.amazonaws.com/contactpartner?partnerId=0010L00001pBtKDQA0&partnerName=CleanSlate%20Technology%20Group)
 
-**Prompt: Generate a health report for SAP HANA database, database cluster, and HSR.**
+---
 
-> generate a health report for SAP Hana database, database cluster and HSR
->
-> \# SAP HANA Health Report
->
-> ## Executive Summary
->
-> Based on the analysis of CloudWatch logs for the SAP HANA system in the SAPDemo environment, the overall health status is GOOD. The SAP HANA database, cluster infrastructure, and HANA System Replication (HSR) are
-> all functioning properly after recovering from replication issues that occurred on July 11-12, 2025.
-> ……
->
-> ## Conclusion
->
-> The SAP HANA database, cluster infrastructure, and HSR are currently healthy and functioning as expected. The system has demonstrated resilience by recovering from previous replication issues. Regular monitoring
-> and proactive maintenance are recommended to maintain system stability and performance.
+# Cleanslate Technology – Featured Partner
 
-**Prompt: What is the current status of SAP ASCS ERS cluster nodes for sap application SAPDemo.**
+At CleanSlate Technology Group, we specialize in designing and building innovative SaaS products, data-driven solutions, and AI-powered applications that help clients achieve their business goals. As a trusted AWS partner, we provide cloud-native application development, DevOps services, and deep architectural expertise to unlock the full potential of modern technologies.
 
-> what is the current status of SAP ASCS ERS cluster nodes for sap application SAPDemo.
->
-> I'll check the current status of the SAP ASCS and ERS cluster nodes for the SAPDemo SAP application.
->
-> 🛠️ Using tool: execute*bash (trusted)
-> ⋮
-> ● I will run the following shell command:
-> aws ec2 describe-instances --filters "Name=tag:Name,Values=\_SAP-FIS-CS*" --query "Reservations[*].Instances[*].[InstanceId,Tags[?Key=='Name'].Value|[0],State.Name,InstanceType,PrivateIpAddress]" --output table
-> ⋮
-> ↳ Purpose: Checking EC2 instances that are part of the SAP \*SAPDemocluster
->
-> ---
->
-> | DescribeInstances |
-> +----------------------+-------------------------+----------+-------------+---------------+
-> | i-064751ba1b4c8340f | SAP-FIS-CS-sapclnode2 | running | c5a.xlarge | 10.0.155.180 |
-> | i-0e08f883d5c3b3747 | SAP-FIS-CS-sapclnode1 | running | c5a.xlarge | 10.0.134.80 |
-> +----------------------+-------------------------+----------+-------------+---------------+
->
-> ⋮
-> ● Completed in 1.737s
->
-> ……
->
-> ## Conclusion
->
-> The SAP ASCS/ERS cluster for the \*SAPDemo application is functioning properly with the expected resource distribution:
-> • ASCS (Central Services) is active on sapclnode2
-> • ERS (Enqueue Replication Server) is active on sapclnode1
-> • Both nodes are online and healthy
-> • The cluster has quorum and is properly configured for high availability
->
-> This is the expected configuration for an SAP high-availability setup, where ASCS and ERS run on separate nodes to ensure enqueue replication functionality in case of a node failure. The cluster is operating normally and no immediate action is required.
+Our expertise also includes migrating and modernizing legacy applications, ensuring they are future-ready and optimized for cloud environments. Whether you are looking to build scalable SaaS solutions, harness the power of data and AI, or modernize your infrastructure, we are committed to delivering transformative outcomes that drive growth, innovation, and long-term adaptability for your organization.
 
-For complex operations, Q CLI guides multi-step processes while MCP provides real-time feedback on system status.
-
-## Use-case 2: Simplify SAP Operations
-
-The following use case aims to maintain SAP Application Servers. Q CLI streamlines daily SAP management by creating runbooks for routine maintenance tasks. SAP BASIS administrators can use Q CLI to manage administrative tasks while monitoring real-time system status via the CloudWatch MCP server during maintenance windows. In this scenario, Q CLI creates a task list as follows:
-
-1.  Prompt to check App Server status.
-2.  Run `aws ec2 describe-instances` to check the SAP application server.
-3.  Run `ssm ps` command to check SAP dispatcher and dialog processes.
-4.  Run `ssm sapcontrol` command to get system status.
-5.  Summarize that the SAP application server is stopped.
-6.  Prompt to start the SAP application server.
-7.  Run `ssm sapcontrol` command to start the SAP application server.
-8.  Run `ssm sapcontrol` command to check the status of processes.
-9.  Run `ssm ps` command to check SAP dialog processes.
-10. Run `ssm sapcontrol` command to get system status.
-11. Summarize that the SAP application server has been started.
-
-**Important Note:** The prompts and responses below have been abbreviated. You can download [Use-case 2 - Simplify SAP Operations](https://d2908q01vomqb2.cloudfront.net/17ba0791499db908433b80f37c5fbc89b870084b/2025/07/17/Use-case-2-Simplify-SAP-Operations.pdf) to view the full prompt and response from Q CLI.
-
-**Prompt: Get status of sap in application server sapbaseaas1. Do not start the server, only report on current status of SAP process.**
-
-> get status of sap in application server sapbaseaas1. Do not start the server, Only report on current status of SAP process.
->
-> I'll check the current status of SAP processes on the application server sapbaseaas1 without starting the server.
-> 🛠️ Using tool: execute*bash (trusted)
-> ⋮
-> ● I will run the following shell command:
-> aws ec2 describe-instances --filters "Name=tag:Name,Values=\_sapbaseaas1*" --query "Reservations[*].Instances[*].[InstanceId,Tags[?Key=='Name'].Value|[0],State.Name,PrivateIpAddress]" --output table
-> ⋮
-> ↳ Purpose: Finding the instance ID for sapbaseaas1
-> ..
->
-> > Now I'll check the current status of the SAP processes on the running sapbaseaas1 server:
-> > ……..
->
-> ## Conclusion
->
-> The SAP application server sapbaseaas1 is currently stopped. While the EC2 instance itself is running and the SAP support processes are active, the actual SAP application instance (dialog instance) is not running.
-> No work processes are active, and the instance is showing as GRAY in the system status. The instance would need to be started to become operational and process SAP transactions.
-
-In the next scenario, the SAP BASIS administrator will ask Amazon Q from the CLI to start an SAP application server, the associated SAP service, and report on the SAP application status. Q CLI's `execute_bash` tool runs 8 SSM commands to execute the request.
-
-**Prompt: Start SAP on the SAP application server sapbaseaas1.**
-
-> start SAP on the SAP application server sapbaseaas1
->
-> I'll start the SAP application on the sapbaseaas1 server.
->
-> 🛠️ Using tool: execute_bash (trusted)
-> ⋮
-> ● I will run the following shell command:
-> aws ssm send-command --instance-ids i-0539ecbaf407c4886 --document-name "AWS-RunShellScript" --parameters 'commands=["sudo su - ecdadm -c \"sapcontrol -nr 00 -function Start\""]' --output json
-> ⋮
-> ↳ Purpose: Starting SAP instance on sapbaseaas1
->
-> ..
->
-> > Now let's check if the SAP instance has started successfully:
->
-> ……..
->
-> ## Conclusion
->
-> The SAP application server sapbaseaas1 is now fully operational. All required processes are running, and the instance is properly integrated with the SAP system. The instance is ready to handle user workloads and
-> process SAP transactions.
-
-## Conclusion
-
-CloudWatch MCP Server delivers unified observability across the entire SAP landscape within the client environment. It consolidates SAP application logs, SAP HANA metrics, and AWS EC2 performance data. The system automatically correlates metrics across SAP components. Q CLI complements this by enabling natural language interaction with this rich dataset, making it easy for teams to generate system logs and simplify SAP system operations. This solution aligns with AWS Well-Architected Frameworks to help you increase productivity in operating and maintaining your SAP Landscape.
-
-In [future blog posts](https://aws.amazon.com/blogs/awsforsap/streamline-sap-operation-with-cloudwatch-mcp-server-and-amazon-q-cli-part-4/), we will discuss how you can leverage CloudWatch MCP Server and Q CLI for maintenance planning and accelerating root cause analysis for SAP, as well as diving into the cost considerations of the solution.
-
-As a next step, try out this solution — you can achieve at least a 6x gain in productivity. Stay tuned for our next innovations on [Amazon CloudWatch](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html), [AWS Model Context Protocol Servers](https://awslabs.github.io/mcp/) and [Amazon Q for command line](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line.html).
-
-## Join the SAP on AWS Discussion
-
-In addition to your customer account team and AWS support channels, we recently launched [re:Post](https://repost.aws/) – A Reimagined Q&A Experience for the AWS Community. Our **AWS for SAP Solution Architecture** team regularly monitors the **AWS for SAP** topic to discuss and answer questions to support customers and partners. If your question is not related to technical support, join the discussion at re:Post and contribute to the community knowledge base.
-
-## Acknowledgments
-
-I would like to thank the following members for their contributions: Sreenath Middhi and Adam Hill.
-
-TAGS: [#saponaws](https://aws.amazon.com/blogs/awsforsap/tag/saponaws/), [AWS Systems Manager](https://aws.amazon.com/blogs/awsforsap/tag/aws-systems-manager/), [CloudWatch](https://aws.amazon.com/blogs/awsforsap/tag/cloudwatch/), [SAP](https://aws.amazon.com/blogs/awsforsap/tag/sap/)
+[Contact CleanSlate Technology](https://partners.amazonaws.com/contactpartner?partnerId=0010L00001pBtKDQA0&partnerName=CleanSlate%20Technology%20Group) | [CleanSlate Overview](https://partners.amazonaws.com/partners/0010L00001pBtKDQA0/CleanSlate%20Technology%20Group)

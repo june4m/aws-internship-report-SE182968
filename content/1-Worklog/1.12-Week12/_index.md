@@ -1,6 +1,6 @@
 ---
 title: "Week 12 Worklog"
-date: "2025-09-08"
+date: "2025-11-24"
 weight: 12
 chapter: false
 pre: " <b> 1.12. </b> "
@@ -8,48 +8,34 @@ pre: " <b> 1.12. </b> "
 
 ### Week 12 Objectives:
 
-- Connect and get acquainted with members of First Cloud Journey.
-- Understand basic AWS services, how to use the console & CLI.
+- **Security & Monitoring:** Scan for security vulnerabilities and set up a system monitoring Dashboard.
+- **Project Wrap-up:** Finalize documentation, perform final optimizations, and prepare presentation slides.
 
-### Tasks to be carried out this week:
+### Tasks to be implemented this week:
 
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP <br>                              | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Day | Task | Start Date | Completion Date | Reference |
+| :--- | :--- | :--- | :--- | :--- |
+| **2-3** | - Configure CloudWatch Alarms and Dashboard.<br>- Perform security review using AWS Trusted Advisor and GuardDuty. | 24/11/2025 | 25/11/2025 | |
+| **4-5** | **Optimization & Packaging:**<br>- Review and delete redundant resources for cost optimization.<br>- Write operational documentation (Runbook).<br>- Draft final report slides (Architecture, Challenges, Lessons Learned). | 26/11/2025 | 27/11/2025 | |
 
-### Week 12 Achievements:
+---
 
-- Understood what AWS is and mastered the basic service groups:
+### Week 12 Achievements: System Finalization & Handover Readiness
 
-  - Compute
-  - Storage
-  - Networking
-  - Database
-  - ...
+#### 1. Performance Evaluation & Tuning
 
-- Successfully created and configured an AWS Free Tier account.
+- **Monitoring:**
+  - Established a **CloudWatch Dashboard** to visually display key metrics: CPU Utilization, Request Count, Database Connections, Error Rate (4xx, 5xx).
+  - Configured **SNS Alerts** to send email notifications to Admins when system issues occur.
 
-- Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+#### 2. Optimization & Advanced Security
 
-- Installed and configured AWS CLI on the computer, including:
+- **Security:**
+  - Enabled **WAF (Web Application Firewall)** to block common attacks (SQL Injection, XSS).
+  - Reviewed IAM Roles and revoked unnecessary privileges.
+- **Cost:** Based on data from the 2-week pilot run, resized Instances from t3.medium to t3.micro for the Dev environment to save costs without impacting performance.
 
-  - Access Key
-  - Secret Key
-  - Default Region
-  - ...
+#### 3. Project Completion
 
-- Used AWS CLI to perform basic operations such as:
-
-  - Check account & configuration information
-  - Retrieve the list of regions
-  - View EC2 service
-  - Create and manage key pairs
-  - Check information about running services
-  - ...
-
-- Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-- ...
+- **Documentation:** Completed the project documentation suite including: Updated Architecture Diagram, Redeployment Guide, and Cost Report.
+- **Lessons Learned:** Gained insights into handling "Cold Start" issues during Auto Scaling and the importance of accurate Health Check configuration.
